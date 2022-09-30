@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_Imgamap</title>
+</head>
+<body>
+  <h2>10_Imgamap</h2>
+  <p>ImgMap 이란?<br> 하나의 Image에 여러개의 Map(사각형, 원형, 다각형) 을 만들어서 link를 걸 수 있는 기능.</p>
+  <p>[ 작성법 ] <map name="mapname", area shape="rect, circle, poligon" coords="좌표값"></map></p>
+
+  <img src="./images/total_book.jpg" alt="교보문고 추천 도서" usemap="#book">
+
+  <map name="book">
+    <area shape="rect" coords="3,10,114,153" href="  http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158711313&orderClick=LEA&Kc=" alt="page로 이동하기">
+    <area shape="rect" coords="132,13,235,154" href="  http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788971968710&orderClick=LEA&Kc=" alt="page로 이동하기" >
+    <area shape="rect" coords="256,15,356,149" href="  https://search.kyobobook.co.kr/web/search?vPstrKeyWord=%25EA%25B7%25B8%2520%25EC%25A6%259D%25EC%2583%2581%252C%2520%25EB%2593%25B1%2520%25EC%258A%25A4%25ED%258A%25B8%25EB%25A0%2588%25EC%25B9%25AD%25EC%259D%25B4%2520%25ED%2595%25B4%25EA%25B2%25B0%25ED%2595%25B4%25EB%2593%259C%25EB%25A6%25BD%25EB%258B%2588%25EB%258B%25A4&orderClick=LEA" alt="page로 이동하기" >
+    <area shape="rect" coords="377,14,478,154" href="  http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791188007523&orderClick=LEa&Kc=" alt="page로 이동하기" >
+  </map>
+  
+  
+  
+  
+</body>
+</html>

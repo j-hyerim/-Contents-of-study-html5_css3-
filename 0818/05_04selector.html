@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_04secetor_자손_후손 p.142</title>
+    <style>
+        header > p{
+            background-color: antiquewhite;
+        }
+        main > p{
+            background-color: rgb(208, 255, 215);
+        }
+        footer > p{
+            background-color: rgb(191, 255, 255);
+        }
+        /* 후손 */
+        #wrap .p01{
+            border: 1px solid #f1d0d0;
+            line-height: 60px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>05_04secetor_자손_후손 p.142</h2>
+    <p>html Tag는 부모요소와 자손요소의 개념으로 작성이 되는데, 부모요소의 바로 아래 자손요소를 선택하고자 할떄는 '자손선택자', 부모요소의 아래 자손요소를 모두 선택하고자 할 때는 '후손선택자'를 사용한다.
+    </p>
+    <p>작성방법) A > b, A b</p>
+    <div id="wrap">
+        <header>
+            <p class="p01">상단</p>
+        </header>
+        <main>
+            <p class="p01">본문</p>
+        </main>
+        <footer>
+            <p class="p01">하단</p>
+        </footer>
+    </div>
+
+    <p class="p01">같은 class를 사용하더라도 후손선택자에 해당되지 않기때문에 서식이 적용되지 않습니다.</p>
+</body>
+</html>

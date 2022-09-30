@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>03_css_link p.136</title>
+    <style>
+        .text_color01 {
+        color : rgb(79, 158, 133);
+        }
+    </style>
+</head>
+<body>
+    <h2>03_css_link p.136</h2>
+    <p>css는 작성방식에 따라 3가지 방식으로 html 문서에 적용할 수 있다.</p>
+    <ol>
+        <li>내부Style- 현재 문서안에서 style 을 선언하여 작성하는 방식</li>
+        <li>외부Style- 별도의 css 문서를 작성하여 html 문서에 link를 연결하는 방식</li>
+        <li>Inline style- 서식을 적용하고자 하는 Tag요소 안에 직접 Style 서식을 작성하여 적용하는 방식 (주로 Test 용)</li>
+        <li>import방식- css 문서 내에서 다른 css 문서를 삽입하는 방식으로 서식을 적용</li>
+    </ol>
+
+    <h3 class="text_color01">1. 내부Style로 서식을 적용하기 - 현재 문서에만 적용하고자 할 떄 사용한다.</h3>
+    <h3 class="text_color02">2. 외부Style로 서식을 적용하기 - 많은 양의 Page에 적용하고자 할 떄 사용한다. (주로 사용)</h3>
+    <h3 style="color:rgb(9, 99, 72);">3. Inline style로 서식을 적용하기 - 정말 급한상황에 적용하고자 할 떄 사용한다.</h3>
+    <h3 class="text_font">4. import방식으로 서식을 적용하기</h3>
+
+    <dl>
+        <dt>색상코드 종류</dt>
+        <dd>색상명 : red, blue, white, black . . .</dd>
+        <dd>hex code : 0~9, a, b, c, d, e, f 문자열을 조합하여 만든 색상코드로서 #000000 같이 6자리 문자열로 조합하여 사용한다.</dd>
+        <dd>rgb code : r(rad), g(green), b(blue) 3가지 color를 조합하여 만든 색상code로서 RGB(0,0,0) 처럼 사용한다.</dd>
+        <dd>rgba code : rgb code에 alpha 값을 사용하여 투명도를 적용하고자 할 때 사용한다.</dd>
+        <dd>hsl code : h(hue:색상), s(saturation:채도), l(Lightness:명도) 값을 사용한다.</dd>
+        <dd>hsla code : hsl code에 alpha(투명도)를 적용하기 위한 색상code</dd>
+    </dl>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head lang="'ko">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_Image_Tag</title>
+  </head>
+  <body>
+    <h2>07_Image_Tag</h2>
+    <p>web 문서 안에서 사용되는 이미지 종류 <br>[ .jpg(고화질), png(고화질, logo, icon, 투명배경이미지), gif(단순 컬러의 이미지나 움직이는 이미지, icon) ]</p>
+    <p>이러한 Image 종류들을 web 문서에 삽입하기 위한 tag element 가 img tag 이며, source의 약자인 'src' 속성과 image가 나오지 않을 때 대체할 문자인 'alt' 속성을 사용한다</p>
+    <p>[ 작성법 ] img src="삽입할 image의 address나 경로" alt="image가 나오지 않을 때 대체 할 문구"</p>
+    <h3>1. image 삽입하기</h3>
+    절대주소를 사용하여 이미지 삽입하기
+    <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" alt="DAUM_image">
+    <br>
+    상대주소를 사용하여 이미지 삽입하기
+    <img src="./img/daum_logo.png" alt="daum_logo">
+
+    <p> URL - Uniform Resource Locator의 약자로서 WebServer에 올라간 File, 문서의 정확한 경로나 주소, 위치를 말함.</p>
+    <p> 상대주소 : HTML 문서가 있는 곳이 기준이 되며, 하위에 img folder가 있을 경우 하위folder(./folderName/fileName.확장자)가 된다.</p>
+    <p> 절대주소 : https://나 http://로 시작하여 'folderName/fileName.확장자'로 끝나는 주소를 말함.</p>
+    <br><img src="auction_logo.gif" alt="aution_logo">
+    <br><img src="../html_1일차/googlelogo.png" alt="aution_logo">
+    
+    <h3>2. image가 나오지 않을 때 대신해서 나오는 설명문구</h3>
+    <p>alt : alternate의 약자로서 image가 나오지 않거나 응답이 없을 때 image를 대신해서 표시할 문구이다.
+      사용자가 혼란스럽지 않게 하기 위함이며, 시각 장애인이 image를 이해 하게 도와주는 언어이기도 하다.
+      음성낭독기를 사용하면 image의 alt속성에 저장된 문자를 읽어준다. Web접근성 규칙 중 하나이다.
+    </p>
+
+    <img src="./img/banner.jpg" alt="WorldCup"><br>
+    <img src="./img/bann.jpg" alt="WorldCup">
+
+    <h3>3. image 삽입 시 caption 문구 활용하기</h3>
+    <figure>
+      <img src="./img/photo.jpg" alt="서울 물난리">
+      <figcaption>중부지역에서 발생한 기록적인 폭우로 현재까지 9명이 숨진 가운데, 주요 외신들은 관련 내용을 대대적으로 전하며 침수에 취약한 '반지하' 주거 형태에 주목했습니다.
+
+        외신들은 반지하를 영어로 'semi-basement'(절반 지하층) 또는 'underground apartment'(지하 아파트)라고 설명하면서 한국어 발음을 로마자 알파벳으로 그대로 옮긴 'banjiha'라는 표현을 사용하기도 했습니다.
+        
+        뉴욕타임스는 이번 폭우에 반지하 주택에서 3명이 사망했다면서, 서울의 반지하 거주민 중 빈곤층이 많다는 과거 기사를 소개했습니다.
+        
+        그러면서 뉴욕타임스는 반지하 주거 형태가 영화 '기생충'의 배경으로 활용됐다고 전했습니다.
+        
+        로이터통신도 반지하 주택을 기생충의 배경으로 소개하고, 윤석열 대통령이 반지하 침수사고 현장을 방문했다고 보도했습니다.
+        
+        BBC방송도 서울 남부에서 폭우로 인명피해가 났다면서 "그동안 서울에서 홍수 피해를 봤던 `반지하`로 알려진 '절반 지하층'에 대한 우려가 커진 상황이었다"고 지적했습니다.
+        
+        AFP통신은 지난 2012년 가수 싸이의 히트곡인 '강남 스타일'에 등장하는 부촌 강남구에서 큰 피해가 발생했다고 전했습니다.
+        
+        강남에서 근무하는 한 시민은 침수된 주차장에서 차를 꺼내면서 AFP통신에 "강남은 경제의 중심이고 개발이 잘된 곳인데 자연재해에 이렇게 취약하다니 참 아이러니하다"고 말했습니다.</figcaption>
+    </figure>
+
+  </body>
+</html>

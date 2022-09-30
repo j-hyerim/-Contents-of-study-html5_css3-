@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">					
+<head>		
+	<mata charset = "utf-8">		
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> title of the document </title>
+</head>					
+<body>					
+	<h2>html5 문서의 기본구조 작성하기와 주의사항</h2><br/>
+1. 첫줄에 DTD 선언 : 문서의 버전을 의미하여, 브라우저가 html 문서를 분석, 번역하여 표시할때 올바른 버전에 맞게 보여주고자 할 때 반드시
+명시 해야 하는 선언문이다. !doctype <br/>
+2. 휴먼 랭귀지 선언 : lang = "ko" 문서안에 들어간 주로 사용하는 언어를 표시하는데, web server에서 검색시 문서안에 내용이 우선 검색이 되도록 하기 위함이며,
+AI를 통해 softwere가 내용을 정확하게 이해하고 보여줄 수 있도록 하기 위함이다.<br/>
+3.META : matatag의 역할은 문서의 내용이나 저자, 날짜 정보, 키우드 등을 나탄고자 할 때 사용하며, 인코딩 utf-8(문자 표현 코드)
+를 넣어서 문자의 호환성을 높여준다.<br/>
+4.문서 작성시 주의사항 
+<br>-html 문서는 태그 명령어로 작성되는데 영문 대, 소문자로 작성된다.<br/>
+-html 문서는 문자와 문자사이에 띄어쓰기가 기본 1칸만 가능하며, 2칸 이상 띄우고자 할 때는 띄어
+쓰기 코드인 &nbsp;코드를 작성한다.
+<br>
+-html태그는 문서 안에서 enter 키를 눌러도 줄 바꿈이 일어나지 않는데, 줄바꿈을 위한 코드인 'br' 태그를 사용해야 한다.(line break의 약자임)<br>
+특수 문자를 입력하고자 할 때는 entity code, charactor code 를 검색하여 찾아 입력해야한다. 브라우저가 올바른 해석을 전달하고자 할 때 필요하다.
+ⓒ => &copy; ♥ => &hearts;
+-키보드에 없는 특수문자는 유니코드 변환 사이트를 참고하여 코드를 찾아서 삽입한다.(http://kor.pe.kr/convert.htm)<br>
+- 주석 : 문서안에서 설명이나 작성자, 날짜를 메모하듯이 적고자 할 떄 사용하며, html주석은 <!-- 여기에 적힌 내용은 화명상에서 보이지 않습니다. -->
+
+</body>					
+</html>					

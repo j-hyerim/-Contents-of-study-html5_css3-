@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_Table_Tag</title>
+  <style>
+    
+    .t1{
+      width: 300px;
+      border-collapse: collapse;
+      border: 1px solid #333;
+    }
+    td,tr,th {border: 1px solid #333;}
+    .t2{
+      width: 700px;
+      border: 1px solid blue;
+      border-collapse: collapse;
+    }
+    .t2 td,.t2 th{
+      border:1px solid blue;
+    }
+    .t_bc{background-color: #ccc;}
+    .t_bc1{background-color: rgb(226, 224, 224);}
+  </style>
+</head>
+<body>
+  <h2>12_table</h2>
+  <p>Table Tag는 표를 만들기 위한 Tag 로서 table, tr(줄 행), td(칸, 셀) , th(셀 제목, table header, caption(설명,제목) Tag로 구성되어 있다.</p>
+  <p>Table Tag를 활용하여 login, 달력, 회원가입, 약관 동의, 예매하기, 문의하기, 게시판, 주문하기 등의 contents Page 작성 시 사용된다.</p>
+
+  <h3>1. Table Tag의 기본구성</h3>
+  <table class="t1">
+    <caption>표 제목, 설명 문구</caption>
+    <tr>
+      <th>제목</th>
+      <th>제목</th>
+      <th>제목</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+  </table>
+
+  <p> th는 제목 cell 이기 때문에 굵게, 가운데 정렬로 표시된다.</p>
+  <p> td는 내용 cell 이기 때문에 </p>
+
+  <h3>2. Table cell 병합하기 - 가로(colspan) 세로(rowspan)</h3>
+  <table class="t1">
+    <caption>가로 cell 병합</caption>
+    <tr>
+      <td colspan="2">cell</td>
+    </tr>
+    <tr>
+      <td>cell</td>
+      <td>cell</td>
+    </tr>
+  </table>
+  <table class="t1">
+    <caption>세로 cell 병합</caption>
+    <tr>
+      <td rowspan="2">cell</td>
+      <td>cell</td>
+    </tr>
+    <tr>
+      <!-- <td>cell</td> -->
+      <td>cell</td>
+    </tr>
+    </table>
+
+    <h3>4. Web 표준/ Web 접근성 Table 만들기</h3>
+    <dt>Web 표준과 Web 접근성</dt>
+    <dd>Web 표준과 Web에서 표준적으로 사용되는 기술의 총칭을 말하며, 대표적인 Web 표준 기술은 html5, css3이다.<br> [ 검사방법 ] 1. html markup 검사 2.css 유효성 검사 3. Crossbrowsing</dd>
+    <dd>Web 접근성은 누구나 불편함 없이 Website에 접근하고 Contents를 편하게 이용 할수 있도록 하는 접근 방법.</dd>
+<br>
+    <table class="t2">
+      <caption>3학년 1학기 중간고사 성적 현황</caption>
+      <thead>
+        <tr>
+          <th class="t_bc">성명</th><th class="t_bc">국어 점수</th><th class="t_bc">수학 점수</th><th class="t_bc">영어 점수</th><th class="t_bc">합계</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>홍길동</td><td>80</td><td>90</td><td>70</td><TD>240</TD>
+        </tr>
+        <tr>
+          <td>이순신</td><td>85</td><td>80</td><td>90</td><TD>255</TD>
+        </tr>
+        <tr>
+          <td>강감찬</td><td>100</td><td>50</td><td>30</td><TD>180</TD>
+        </tr>
+      </tbody>
+      <tfoot>
+        <TR>
+          <TD class="t_bc1">합계</TD><td class="t_bc1">265</td><td class="t_bc1">220</td><td class="t_bc1">190</td><td class="t_bc1">&nbsp;</td>
+        </TR>
+      </tfoot>
+    </table>
+
+    <p>thead, tbody, tfoot tag를 사용하여 표의 영역을 지정해주며, tbody와 tfoot의 영역 위치를 변경함으로써 결과 내용을 먼저 듣고 건너 뛸 수 있는 방법을 설정한다. 시각 장애인분들의 음성낭독기 이해를 돕는 역할을 한다. </p>
+</body>
+</html>

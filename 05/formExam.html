@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormExam</title>
+  <style>
+    #point{
+      color: rgb(255, 0, 0);
+    }
+    header>p{text-align: right;}
+    
+  </style>
+</head>
+<body>
+  <header>
+    <p><span id="point">＊</span>표시는 필수 입력 항목입니다.</p>
+    <hr>
+  </header>
+  
+
+  <!-- 메인 안에 스펜 전부 크기 정하고 인풋 사이즈도 일정하게 -->
+  <main>
+    <form action="">
+      <div>
+        <span><span id="point">＊</span>제품문의</span>
+        <select name="" id="">
+          <option>제품문의</option>
+          <option>옷</option>
+          <option>신발</option>
+          <option>모자</option>
+        </select>
+      
+      </div>
+    <hr>
+    <div>
+        <span><span id="point">＊</span>성함</span>
+        <input type="text" maxlength="30">
+    <hr>
+  </div>
+      <div>
+        <span><span id="point">＊</span>회사명</span>
+        <input type="text" maxlength="30">
+    <hr>
+  </div>
+        <span><span id="point">＊</span>직급</span>
+        <input type="text" maxlength="30">
+    <hr>
+    <div>
+        <span><span id="point">＊</span>부서명</span>
+        <input type="text" maxlength="30">
+    <hr>
+  </div>
+      <div>
+        <span><span id="point">＊</span>회사규모 </span>
+        <select name="" id="">
+          <option>I-50</option>
+          <option>K-77</option>
+          <option>Q-98</option>
+          <option>Y-63</option>
+        </select>
+    <hr>
+  </div>
+      <div>
+        <span><span id="point">＊</span>기관구분 </span>
+        <input type="radio" name="a" id="q1"><label for="q1">기업</label>
+        <input type="radio" name="a" id="q2"><label for="q2">공공</label>
+        <input type="radio" name="a" id="q3"><label for="q3">금융</label>
+        <input type="radio" name="a" id="q4"><label for="q4">교육</label>
+        <input type="radio" name="a" id="q5"><label for="q5">기타</label>
+    <hr>
+  </div>
+      <div>
+        <span><span id="point">＊</span>전화번호 </span>
+        <input type='tel' name='p1'> -
+        <input type='tel' name='p2'> -
+        <input type='tel' name='p3'>
+      </div>
+      <div>
+        <span><span id="point">＊</span>E-Mail </span>
+        <input type="email" name="m1"> @
+        <input type="email" name="m2"> 
+        <select name="" id="">
+          <option>메일계정선택</option>
+          <option>naver.com</option>
+          <option>gamil.com</option>
+          <option>icloud.com</option>
+          <option>hanmail.net</option>
+          <option>daum.net</option>
+        </select>
+    <hr>
+  </div>
+      <div>
+        <span>문의제품</span>
+        <input type="checkbox" id="w1"><label for="w1">네이버 검색</label>
+        <input type="checkbox" id="w2"><label for="w2">구글 검색</label>
+        <input type="checkbox" id="w3"><label for="w3">다음 검색</label>
+        <input type="checkbox" id="w4"><label for="w4">보도자료</label>
+        <input type="checkbox" id="w5"><label for="w5">신문광고</label><br>
+        <input type="checkbox" id="w6"><label for="w6">온라인광고</label>
+        <input type="checkbox" id="w7"><label for="w7">지인소개</label>
+        <input type="checkbox" id="w8"><label for="w8">뉴스레터</label>
+        <input type="checkbox" id="w9"><label for="w9">기타 <input type="text"></label>
+    <hr>
+  </div>
+      <div>
+        <span><span id="point">＊</span>방문경로 </span>
+        <input type="radio" name="a1" id="q11"><label for="q11">pc 화면 보안</label>
+        <input type="radio" name="a1" id="q22"><label for="q22">모바일 App 보안</label>
+        <input type="radio" name="a1" id="q33"><label for="q33">멀티미디어 보안</label>
+        <input type="radio" name="a1" id="q44"><label for="q44">CCTV 보안</label><br>
+        <input type="radio" name="a1" id="q55"><label for="q55">문서 DRM</label>
+        <input type="radio" name="a1" id="q66"><label for="q66">웹 위변조 보안</label>
+        <input type="radio" name="a1" id="q77"><label for="q77">취약점 통합 보안</label>
+        <input type="radio" name="a1" id="q88"><label for="q88">기타</label>
+    <hr>
+  </div>
+      <div>
+        <span>문의내용</span>
+        <textarea name="" id="" cols="50" rows="10">
+          
+        </textarea>
+      </div>
+     <div>
+      <input type="submit" value="submit">
+      <input type="reset" value="reset">
+     </div>
+    </form>
+    
+  </main>
+</body>
+</html>

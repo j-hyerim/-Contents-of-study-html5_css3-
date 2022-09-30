@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>16_추가Form속성</title>
+</head>
+<body>
+    <h2>16_추가Form속성</h2>
+    <h3>1. required - form 양식 중 반드시 입력해야하는 양식에 적용하며, 필수 입력이라고도 한다.</h3>
+    <form name="FormName" action="받을 서버 주소" method="전송방식">
+        <fieldset>
+            <legend>추가 Form 속성</legend>
+            <label for="">Id : </label><input type="text" required><br>
+            <label for="">password : </label><input type="password" required><br>
+            <input type="submit" value="Login">
+        </fieldset>
+
+        <h3>2. placeholder : 각 field 항목에 대한 입력 형식 흰트를 제공해주는 속성이다.</h3>
+        <fieldset>
+            <legend>Search Form</legend>
+            <input type="search" placeholder="8월 여름 초특가 상품전"><input type="button" value="검색">
+        </fieldset>
+
+        <h3>3. autofocus : page가 loading되었을 때 Focus가 설정된 항목에 커서가 위치하도록 한다. 주로 Web Site의 자주 사용하는 Contens에 초점을 맞추는 경우가 많은데 검색 Site ( naver, google, daum )의 경우는 검색창에 초점을 맞춘다.</h3>
+        <fieldset>
+            <legend>Search Form</legend>
+            <input type="search" placeholder="8월 여름 초특가 상품전" autofocus>
+            <input type="button" value="검색">
+        </fieldset>
+
+        <h3>4. disabled , readonly : 서식을 사용 불가능하게 하는 속성 ( disabled ), 선택하지 않고 읽기만 가능한 속성( readonly )</h3>
+        <input type="button" value="이전">
+        <input type="button" value="다음" disabled>
+        <input type="text" value="내국인" readonly>
+    </form>
+
+</body>
+</html>

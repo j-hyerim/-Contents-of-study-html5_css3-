@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13_Multimedia</title>
+</head>
+<body>
+  <h2>12_Multimedia</h2>
+  <p>Multimedia란? <br> -multi + media 의 합성어로서 '다중+매체' 라고 하며 신문, 잡지, radio, tv 등을 말하며 
+  오늘 날에는 Internet의 비중이 많이 커졋다. 또한 사용자는 pc, tablet, mobile, smart watch, notebook 기기를 통하여 정보를 접한다.</p>
+  <p>Web Page를 구성하는 요소에는 문자, Image, Contents 외에 영상이나 sound, Flash Animation 등의 multimedia에 속한다. 영상이나 sound를 삽입하기 위한 Tagelement를 Multimedia Tag 라고 한다.</p>
+  <p>html5 이전에는 object, embed 라는 Tag를 사용했지만, w3c에서는 html5 Web 표준에서 video, audio Tag를 추가하여 표준화 하였다.</p>
+
+  <h3>1. 음악 sound file의 종류와 삽입 방법 - mp3, ogg</h3>
+  <audio src="./media/kalimba.mp3" controls></audio>
+  <audio src="./media/kalimba.ogg" controls></audio>
+  <p>[ caniuse.com ] Page에 접속하여 검색창에 ogg라고 검색하면 호환되는 browser의 종류와 버전을 표시해준다.</p>
+  <p>음악 File의 확장자는 System, 사용자 환경, Browser의 종류, version에 따라 지원이 안되는 경우가 있기 때문에 대체할 음악을 미리 넣어주거나 대체할 문구를 삽입한다.</p>
+  <audio controls>
+    <source src="./media/Kalimba.mp3" type="audio/mp3">
+    <source src="./media/kalimba.ogg" type="audio/mp3" >
+    <p>이 Browser에서는 지원되지 않는 Contents가 있습니다. System을 Upgrade 하세요.</p>
+  </audio>
+  
+  <h3>2. 영상 file의 종류와 삽입 방법 - mp4, ogv, webm</h3>
+  <video src="./media/Painting.mp4" controls></video>
+  <video src="./media/Painting.ogv" controls></video>
+  <video src="./media/Painting.webm" controls></video>
+
+  <p>mp4확장자는 모든 browser에서 잘 지원되지만 webm확장자는 explorer, safari, Android Browser에서는 지원이 안된다. 따라서 webm, ogv 확장자 사용 시 대체 영상을 넣어준다.</p>
+
+  <video controls>
+    <source src="./media/Painting.mp4" type="video/mp4">
+    <source src="./media/Painting.ogv" type="video/ogv">
+    <source src="./media/Painting.webm" type="video/webm">
+    <p>이 Browser에서는 지원되지 않는 Contents가 있습니다. System을 Upgrade 하세요.</p>
+  </video>
+  <p>Google 정책 또는 Web 접근성 지침서에서는 영상을 삽입할 시 자동재생을 하는것을 권장하지 않습니다.</p>
+  <p>자동으로 영상을 재생하고자 할때는 option에 autoplay와 muted속성을 넣어서 음소거 해준다.</p>
+</body>
+</html>

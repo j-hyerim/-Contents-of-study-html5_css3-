@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14_Form_Tag</title>
+</head>
+<body>
+  <h2>14_Form_Tag</h2>
+  <p>form tag란? <br> 사용자가 입력한 정보(ID, Password 등)를 Server로 전송하는 역할을 하며, form Tag를 활용한 양식의 종류에는 Login Form, 회원가입 Form, 검색 Form, 예약 Form 등의 다양한 양식을 만들 수 있다.</p>
+  <p>양식을 만들 때는 form tag로 묶어서 작성하며, name, method, action 속성이 들어간다.</p>
+  <form name="" action="" method="">
+    <h3>1. formgroub의 지정과 formtitle 설정하기</h3>
+      <fieldset>
+        <legend>양식Groub의 제목</legend>
+        <p>fieldset tag는 form 양식으로, 제작한 각각의 내용들을 영역별로 구분 하기 위해 사용하며, 테두리가 나오는 특징이 있다.</p>
+      </fieldset>
+      <fieldset>
+        <legend>Login Form</legend>
+        ID : <input type="text"><br>
+        Password : <input type="password">
+      </fieldset>
+
+    <h3>2. formTag의 종류</h3>
+    <p>1. text box : 한글, 영문자를 입력하고자 할 때 사용되는 양식이며, 양식 Tag 중 가장 많이 사용되는 Tag이다.</p>
+    <input type="text" maxlength="16">
+    
+    <p>2. password box : password, 주민번호, 인증번호 등 보안을 요구하는 내용을 입력하고자 할 때 사용하는 양식이며, 글자가 보이지 않도록 '기호'로 대체되어 표시된다.</p>
+    <input type="password" maxlength="16">
+    
+    <p>3. radio button : 다수의 항목 중 하나를 선택하는 양식으로, 하나를 선택하기 위해서는 name 속성을 사용해야 한다.</p>
+    <input type="radio" name="family" id="a"><label for="a">boy</label>
+    <input type="radio" name="family" id="b"><label for="b">girl</label>
+    <p>radio button을 click할때만 선택이 가능하지만, click을 용이하게 사용하기 위해 접근성을 높일 필요가 있다. lable tag에 for 속성을 사용하고 input tag에 id="name"으로 연결해주는게 그 방법이다. 주로 모바일 화면에서 버튼을 편하게 선택하기 위해 사용된다.</p>
+    
+    <p>4. check box : 여러 항목 중 사용자가 원하는 항목만 선택 가능하다.</p>
+    나의 취미 : 
+    <input type="checkbox" id="c1"><label for="c1">computer</label>
+    <input type="checkbox" id="c2"><label for="c2">game</label>
+    <input type="checkbox" id="c3"><label for="c3">독서</label>
+    <input type="checkbox" id="c4"><label for="c4">기타</label>
+
+    <p>5. 선택 목록 : Shopping mall obtion 선택, 전화번호 입력, 통신사 선택, 예매 목록, 인원 수, 언어 설정, family site 등의 양식을 만들고자 할 때 사용하는 양식이다.</p>
+    <select name="" id="">
+      <option>언어설정</option>
+      <option>한국어</option>
+      <option>영어</option>
+      <option>일본어</option>
+    </select>
+
+    <p>6. 다중 Text box : 한줄 입력이 아닌 여러줄의 내용을 입력하고자 할 때 사용한다. 한줄 평, 댓글, Mail, 글 작성, 문의하기 등에 사용된다.</p>
+    <textarea name="" id="" cols="30" rows="10">
+      Write
+    </textarea>
+
+    <p>7. file 첨부 : 게시판이나 E-Mail 양식에서 상대방에게 File을 전송하기 위한 양식이다.</p>
+    <input type="file">
+
+    <p>8. button : 전송하기, 취소하기, GeneralButton, ImageButton</p>
+    <input type="submit" value="submit">
+    <input type="reset" value="reset">
+    <input type="button" value="general">
+    <input type="image" src="./images/facebook_btn.jpg">
+  </form>
+</body>
+</html>

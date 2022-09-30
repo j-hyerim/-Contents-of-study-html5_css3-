@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>html5 추가 FormTag와 속성</title>
+    <style>
+        .t1 ,.t2 {
+            display: none;
+        }
+
+    </style>
+    <script>
+        function bar_action(){
+            document.getElementById("bar").value="100";
+        }
+    </script>
+</head>
+<body>
+    <h2>html5추가 form Tag와 속성</h2>
+    <p>html5에서 추가된 form Tag와 속성들은 현재 사용하고 있는 Browser(크롬, 사파리, 오페라, ms edge, 웨일, 스윙, 파이어 폭스..등)에서 버전 별로 지원을 하고 있기 때문에 지원상황을 확인하고 사용해야 한다.
+        https://caniuse.com(Browser 버전 별 Tag 지원 유무 확인 Site)
+    </p>
+    <form action="serverAddress">
+        <h3>
+            1. Form 양식 그룹을 지정하기 위한 요소 - fieldset, legend
+        </h3>
+        <fieldset>
+            <legend>필수 입력 정보</legend>
+            <label for="id" class="t1">ID : </label>            <input type="text" placeholder="ID">
+            <label for="pas" class="t2">PASSWORD : </label>     <input type="password" placeholder="Password">
+        </fieldset>
+        <fieldset>
+            <legend>선택 입력 정보</legend>
+            <label for="address">주소 : </label> <input type="text" placeholder="ex) 00시 00구 00동 00">
+            <label for="Email">E-mail : </label> <input type="eamil" placeholder="id@domain.co.kr or.com">
+        </fieldset>
+        <p>placeholder 속성 : 사용자가 입력할 내용을 미리 알려주어 오류가 나지 않도록 방지해줌. Web 접근성 측면에서 도움이 많이 된다.</p>
+
+        <h3>2. search : 사용자가 입력양식에 키워드를 입력하여 검색할 수 있도록 하고자 할 때 사용하는 양식으로서 단어를 입력하면 오른쪽 끝에 'X' 표시가 뜨며 Click 할시 내용이 삭제되는 양식</h3>
+
+        <input type="search" placeholder="검색어를 입력하세요 : W W W"> <input type="button" value="button">
+
+        <h3>3. email : email 주소를 입력하기 위한 박스로서 입력양식이 맞지 않을 경우 에러가 난다.</h3>
+        <input type="email"placeholder="id@domail">
+        <input type="submit" value="확인">
+
+        <h3>4. url : 사용자가 도메인 주소를 입력할 수 있도록 하는 양식이며, 주소 형식이 맞지 않을 경우 에러 메세지가 나온다.</h3>
+        <label for="">주소를 입력하세요</label><input type="url" placeholder="http://도메인.com or .co.kr">
+        <input type="button" value="확인">
+
+        <h3>5. tel : 전화번호를 입력하기 위한 양식(mobile)</h3>
+        <input type="tel" placeholder="010-9876-5432">
+
+        <h3>6. number : 숫자를 입력하기 위한 박스로 직접 입력하거나 화살표로 설정이 가능하다.</h3>
+        <input type="number" min="1" max="20" step="1" value="1"> 개 <input type="button" value="선택완료">
+
+        <h3>7. range : 숫자 범위를 슬라이드 바로 조정</h3>
+        <input type="range">
+
+        <h3>8. date : 년, 월, 일을 선택하기 위한 요소로서 Click 할시 달력창이 활성화된다.</h3>
+        <input type="date">
+
+        <h3>9. datetime : 연, 월, 일, 시, 분까지 선택하기 위한 요소로서 html5에서 없어졌다가 5.1부터 다시 사용된다.</h3>
+        종료 날짜 : <input type="datetime" value="2022-11-25">
+
+        <h3>10. month : 연과 월만 선택하는 요소이다.</h3>
+        <input type="month">
+
+        <h3>11. week : 연도와 주를 선택하는 요소이다.</h3>
+        <input type="week">
+
+        <h3>12. time : 시, 분을 선택하는 요소이다.</h3>
+        <input type="time">
+
+        <h3>13. color : 색상을 선택하기 위한 요소이다.</h3>
+        <input type="color">
+
+        <h3>14. progress : 진행 정도를 나타내는 바를 만드는 태그로서 max, value 속성을 사용한다.</h3>
+        <input type="progress">
+        <div><progress value="90" max="200"></progress></div>
+        <div><progress value="84" max="100"></progress></div>
+        <div><progress value="20" max="233" id="bar" ></progress></div>
+    </form>
+
+        <button onclick="bar_action()">Click</button>
+
+        <a href="tel:01049107519" title="">통화하기</a>
+        <a href="sms:01049107519" title="">SMS 문자 보내기</a>
+</body>
+</html>

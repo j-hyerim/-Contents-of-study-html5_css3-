@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_Hyperlink_Tag</title>
+ 
+</head>
+<body>
+  <div>
+    <a href="#b"title="1. Text link">1. Text link</a>
+    <a href="#c"title="2. Image link">2. Image link</a>
+    <a href="#d"title="3. E-Mail link">3. E-Mail link</a>
+    <a href="#e"title="4. 특정 위치로 이동하는 네임앵커">4. 특정 위치로 이동하는 네임앵커</a>
+  </div>
+  <h2 id="a">09_Hyperlink_Tag</h2>
+  <p>Hyperlink란? <br> hyperText로 이루어진 문서에서 사용자가 Mouse로 Click 하였을 때 다른 문서나 Page로 이동하기 위한 Element <br>[ Text / Image / E-Mail / 문서의 특정위치로 이동 / 하나의 Image에 여러 link를 할 수 있는 ImagemapLink ]</p>
+  <p>[ 작성법 ] anchor Hyper reference 의 약자인 a tag와 href 속성, title 속성을 사용한다.</p>
+  <p>a href="연결하고자 하는 Page address나 경로" title="설명문구"</p> 
+
+  <h3 id="b">1. Text link</h3>
+  <a href="http://www.naver.com" title="naver">naver</a>
+  <a href="http://www.daum.com" title="daum">daum</a>
+  <a href="http://www.google.com" title="google">google</a>
+  <a href="../07_Image_Tag.html" title="07">07_Image_Tag로 이동하기</a>
+  <a href="../08_SVG_Image.html" title="08">08_SVG_Image로 이동하기</a>
+
+  <h3 id="c">2. Image link</h3>
+  <a href="http://www.naver.com" title="naver 바로가기">
+    <img src="./svg/sp_search.svg" alt="naver_logo">
+  </a>
+
+  <h3 id="d">3. E-Mail link</h3>
+  <p>Click 할 시 E-Mail로 보내는 Program이 자동으로 실행되어 사용자가 관리자에게 Mail을 보낼 수 있도록 하는 기능이다.</p>
+  <a href="mailto:id@naver.com" title="Mail 보내기">관리자에게 Mail 보내기</a>
+  <p>WebPage 하단 영역에 사용하며, Shopping Mall, 회사 등 WebPage 관리자 E-Mail 주소가 많다.</p>
+
+  <h3 id="e">4. 특정 위치로 이동하는 네임앵커</h3>
+  <p>네임앵커란? <br> 특정위치에 ID 값을 표시한 후 HyperLink 시 주소에 Id 값을 설정하면 특정위치로 Page가 이동하는 기능이다. [책갈피기능]</p>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<a href="#a" title="위로 가기">Top</a>
+</body>
+</html>
