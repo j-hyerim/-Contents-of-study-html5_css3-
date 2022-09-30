@@ -1,0 +1,39 @@
+@charset "utf-8";
+main{
+    clear: both;
+    padding-top: 50px;
+    background: rgb(93, 185, 210);
+    background: linear-gradient(to bottom, rgba(93,185,210,1) 40%, rgba(204,204,204,1) 40%);
+}
+.g_wrap{
+    display: grid;
+    padding: 2%;
+    grid-gap:5px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: repeat(3,auto);
+}
+.g_wrap > h2{display: none;}
+.g_wrap > div{}
+.g_wrap img{width: 100%;}
+.item1{
+    grid-area: 1/1/3/3;
+}
+
+.skypass h2{
+    display: none;
+}
+
+.skypass::click{}
+.skypass{
+    background-image: url(../e_images/skypass.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 1190px;
+    max-height: 1285px;
+    
+}
+@media screen and (min-width:220px) and (max-width:767){
+    .skypass{
+        height:1285px;
+    }
+}
