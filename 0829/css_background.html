@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_css_background(배경속성 p.183)</title>
+  <style>
+    .bgcolor > li:first-child{background-color:rgba(255,0,0,.9);}
+    .bgcolor > li:nth-child(2){background-color:rgba(255,0,0,.7);}
+    .bgcolor > li:nth-child(3){background-color:rgba(255,0,0,.5);}
+    .bgcolor > li:nth-child(4){background-color:rgba(255,0,0,.3);}
+    .bgcolor > li:last-child{background-color:rgba(255,0,0,.1);}
+
+    div{
+      width:calc(100%/2);
+      height:300px;
+      border:3px solid #000;
+    }
+    .box01{background-image:url('./img/back.jpg');}
+    .box02{
+      background-image:url('./img/back.jpg');
+      /* background-repeat:no-repeat; */
+      /* background-repeat:repeat-x; */
+      background-repeat:repeat-y;
+    }
+    .box03{
+      background-image:url('./img/back.jpg');
+      /* background-size:100%;  가로폭에 맞춰서 크기가 커짐 */
+      background-size:contain; /* 높이를 기준으로 크기가 커짐 */
+      
+    }
+    .box04{
+      background-image:url('./img/back.jpg');
+      /* background-origin: border-box; 테두리를 포함한 부분부터 배경이미지가 나오기 시작 */
+      background-origin: content-box; /* 테두리 안쪽으로 부터 배경이미지 시작 */
+    }
+    .box05{
+      width:100%;
+      background-image:url('./img/fav_prod_bg_new.jpg');
+      background-attachment: fixed;
+    }
+    .box06{
+      background-image:url('./img/back.jpg');
+      background-repeat:no-repeat;
+      background-position:100px 200px; /* x, y */
+    }
+    .box07{
+      background:url('./img/auction.gif') left, url('./img/daum.png') right;
+      background-repeat:no-repeat;
+    }
+    h1{
+      border:3px solid #000000;
+      width:204px;height:46px;
+      background-image:url('./img/sp_main_v180412.png');
+    }
+    h1 > a{
+      /* display:none; */
+      /* opacity: 0; 글자를 투명 */
+      text-indent:-9999px; /* 모니터 해상도 1920보다 크게 설정해서 안보이게 함.*/
+      display:block; /* 블럭성격으로 전환하여 클릭이 잘되게 한다. */
+      height:46px; /* 박스크기를 부모크기와 동일하게 한다. */
+    }
+
+    .m_logo{
+      width:50px;height:50px;
+      background-image:url('./img/sp_main_v180412.png');
+      background-position:-77px -67px;
+      text-indent:-9999px;
+    }
+
+    .total_mnu{
+      width:66px;height:68px;
+      display:block;
+      border:2px solid #ff0000;
+      background-image:url('./img/sp_header.png');
+      background-position:0px -224px;
+      text-indent:-9999px;
+    }
+
+    /* 네이버 다크모드 버튼 서식 */
+    .dark_btn{
+      width:264px;height:94px;
+      display:block;
+      background-image:url('./img/sp_main_4f8ccb.png');
+      background-position:-544px -114px;
+      text-indent:-9999px;
+      position:fixed;
+      right:100px;bottom:100px;
+    }
+    .dark_btn:hover{
+      background-position:-544px -222px;
+    }
+    #wrap{width:100%;height:100%;}
+    #d_btn:checked ~ #wrap{
+      background-color:#333;
+      color:#fff;
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="d_btn">
+<div id="wrap">
+  <h2>01_css_background(배경속성 p.183)</h2>
+  <ul>
+    <li>1. background-color : 배경색상(#000000, rgb(), rgba(), hsl(), hsla())</li>
+    <li>2. background-image : 배경이미지</li>
+    <li>3. background-repeat : 배경반복설정</li>
+    <li>4. background-position : 배경위치지정</li>
+    <li>5. background-size : 배경크기지정</li>
+    <li>6. background-origin : 배경이미지 기준위치 지정</li>
+    <li>7. background-attachment : 배경이미지 고정</li>
+    <li>8. 멀티백그라운드 : css3에서 추가된 속성으로서 여러 이미지를 한꺼번에 삽입할 수 있다.</li>
+  </ul>
+
+  <dl>
+    <dt>색상코드</dt>
+    <dd>1. 색상명 : red, yellow, blue, black, white, green....... </dd>
+    <dd>2. hex코드 or 16진수 코드 : 0~9, a,b,c,d,e,f의 숫자와 문자를 조합하여 만든 코드이며 #00000(검정), #ffffff(흰색), #ff0000(빨강), #00ff00(초록), #0000ff(파랑)으로 작성된다.</dd>
+    <dd>3. rgb : red, green, blue 의 3가지 색상을 사용하여 색을 표현하는 코드로서 rgb(255,255,255)식으로 작성한다.</dd>
+    <dd>4. rgba : rgb색상코드에  alpha값을 사용하여 투명도를 적용할 수 있는 색상코드</dd>
+    <dd>5. hsl : hue(색조), saturation(채도), lightness(명도) 3가지 속성을 사용하여 색상을 표현하는 코드.</dd>
+    <dd>6. hsla : hsl색상코드에 alpha값을 사용하여 투명도를 적용하는 코드.</dd>
+  </dl>
+
+  <h3>1. 배경색상 적용하기</h3>
+  <ul class="bgcolor">
+    <li>투명도 90%</li>
+    <li>투명도 70%</li>
+    <li>투명도 50%</li>
+    <li>투명도 30%</li>
+    <li>투명도 10%</li>
+  </ul>
+
+  <h2>2. 배경이미지 삽입</h2>
+  <div class="box01"></div>
+
+  <h2>3. 배경이미지 반복설정하기</h2>
+  <div class="box02"></div>
+
+  <h3>4. 배경이미지 크기지정하기</h3>
+  <div class="box03"></div>
+
+  <h3>5. 배경이미지 기준위치 설정하기</h3>
+  <div class="box04"></div>
+
+  <h3>6. 배경이미지 고정시키기</h3>
+  <div class="box05"></div>
+
+  <h3>7. 배경이미지 위치 지정하기(position) </h3>
+  <div class="box06"></div>
+
+  <h3>8. 멀티 백그라운드</h3>
+  <div class="box07"></div>
+
+  <h3>실습예제 - </h3>
+  <p>네이버 스프라이트 이미지를 삽입하고 네이버 로고만 보이게 하기</p>
+
+  <h1>
+    <a href="index.html" title="메인페이지로 바로가기">
+      네이버 로고
+    </a>
+  </h1>
+
+  <h3>실습예제2 - 네이버 스프라이트 이미지의 모바일 로고 나오게 하기</h3>
+  <div class="m_logo">
+    네이버 모바일 로고 나오게
+  </div>
+
+  <h3>실습예제3 - 지마켓 스프라이트 이미지를 사용하여 '전체메뉴'버튼 삽입하기</h3>
+  
+  <label class="total_mnu">전체메뉴</label>
+
+  <h3>실습예제4 - 네이버 스프라이트 이미지를 사용하여 '다크모드'버튼 구현하기 </h3>
+  <label class="dark_btn" for="d_btn">다크모드</label>
+
+</div>
+</body>
+</html>

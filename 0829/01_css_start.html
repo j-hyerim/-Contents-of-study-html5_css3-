@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_css_start(css소개와 문법)</title>
+  <style>
+    /* 1. 내부스타일 서식 */
+    h2{color:#ff0000;}
+  </style>
+
+  <!-- 2. 외부스타일 서식 -->
+  <link href="./css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <h2>01_css_start(css소개와 문법)</h2>
+  <p>css는 Cascading Style Sheets의 약자로서 html문서의 내용에 서식을 적용하기 위한 언어로서 미국의 '에릭 메이어'라는 개발자에 의해서 개발된 언어이다.</p>
+  <p>현재까지 css level3까지 나온 상태로서 웹문서의 레이아웃, 그림자효과, 애니메이션 등의 동적인 콘텐츠도 개발이 가능한 상태이다.</p>
+  <p>css의 특징은 웹문서 제작시 다양한 사용자 환경에서 동일한 내용을 볼 수 있게 표현해주는 언어로서 웹표준 제작시 필수언어이다.</p>
+
+  <h3>1. css문법(작성법)</h3>
+  <p>css언어는 기본적으로 head안에서 작성되며, 문법은 '선택자{속성:값;}'으로 작성된다.</p>
+  <p>1) 선택자(selector) : 서식을 적용하기 위해서 선택해야 하는 방법/수단을 말함.</p>
+  <p>2) 속성(property) : 서식의 종류로서 예를 들면 글자모양(font-family), 글자크기(font-size), 글자색(color), 배경색, 가로크기, 세로크기 등 서식내용을 말한다.</p>
+  <p>3) 값(value) : 속성을 선택하면 반드시 설정하는 내용을 말한다. 예를 들면 'font-size:20px;background:#f00'</p>
+
+  <h3>2. css언어의 특징</h3>
+  <p>css언어는 모든 문서에 동일한 서식을 만들 수 있으며, 어느 환경에서나 사용자가 의도한 디자인을 구현할 수 있다. 유지보수 측면에서도 편리한 장점이 있다.</p>
+  <p>css언어는 html태그처럼 주석을 표시할 수 있는데 '/* 주석내용 */'으로 작성한다.</p>
+
+  <h3>3. css작성시 위치지정 방법</h3>
+  <p>1. 내부스타일 : 현재문서의 head안에 style선언하여 서식을 작성하고 적용하는 방식으로서 현재 문서에서만 적용이 가능.</p>
+  <p>2. 외부스타일 : 별도의 css문서를 작성하여 html문서에 link방식으로 연결하여 서식을 적용.</p>
+  <p>3. 인라인스타일 : 서식을 적용하고자 태그요소안에 사용자가 직접 스타일 서식을 작성하여 적용하는 방법으로 주로 테스트용으로 사용한다.</p>
+
+</body>
+</html>

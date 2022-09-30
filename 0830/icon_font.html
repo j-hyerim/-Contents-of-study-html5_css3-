@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image를 대체하기 위한 icon font 기술</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <h2>image를 대체하기 위한 icon font 기술</h2>
+    <p>web font를 사용하여 특수문자(자음+한영키)를 삽입하듯이 다양한 아이콘을 삽입할 수 잇는 기술을 말하며, icon font를 제공하는 업체로는 폰트어썸, 부트스트랩, 구글, XEICON 등이 있다.</p>
+    <p>icon font는 기존의 icon을 image로 삽입하는 sprite image 방식의 단점을 보완한 아이콘 삽입방법으로서 다양한 디바이스에서 활용이 가능하고 css web font 를 사용하여 서식을 글자처럼 꾸밀 수 있는 장점이 있다.</p>
+
+    <p>w3schools Site의 icon 카테고리에서 사용법 확인</p>
+
+    <h3>1. 폰트어썸을 사용하여 icon 삽입하기</h3>
+    <p>폰트어썸 cdn 주소를 작성하고 ,span ,i Tag와 icon의 class명을 찾아서 작성하면 icon을 표시할 수 있다.</p>
+    <p>https://cdnjs.com/libraries/font-awesome</p>
+    <span class="fas fa-bars"></span>
+    <i class="fab fa-twitter"></i>
+    <i class="fas fa-user"></i>
+    <i class="fas fa-shopping-cart"></i>
+    <span class="fab fa-youtube"></span>
+
+    <h3>2. 부트스트랩을 사용하여 icon 삽입하기</h3>
+    <p>bootstrap link 주소를 작성한 후, 삽입하고자 하는 icon의 class 명을 i, span Tag에 작성하면 icon이 표시된다.</p>
+    <span class="glyphicon glyphicon-off"></span>
+    <span class="glyphicon glyphicon-cloud"></span>
+    <span class="glyphicon glyphicon-glass"></span>
+    <span class="glyphicon glyphicon-star"></span>
+    <span class="glyphicon glyphicon-ok"></span>
+
+    <h3>3. 구글 웹폰트를 사용하여 icon 삽입하기</h3>
+    <p>google font link주소를 작성한 후, class 명은 무조건 'material-icons'을 작성해야하며, 삽입하고자 하는 icon의 이름을 i, span tag 안에 작성한다.</p>
+    <i class="material-icons">close</i>
+    <span class="material-icons">place</span>
+
+</body>
+</html>

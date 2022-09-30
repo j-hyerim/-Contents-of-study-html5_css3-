@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습예제-지마켓 스프라이트 이미지를 활용한 내비게이션</title>
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <style>
+        header{
+            width: 100%;
+        }
+        header > h1{
+            width: 200px;
+            height: 50px;
+            background-image: url('./exam_img/common.png');
+            margin-bottom: 10px;
+        }
+        header > h1 > a {
+            display: block;
+            line-height: 50px;
+            text-indent: -9999px;/*말도 안되는 값을 적용해 모니터 밖으로 내보낸다.*/
+        }
+        header label[for=toggle]{
+            background-image: url('./exam_img/common.png');
+            display: block;
+            width: 201px;
+            height: 50px;
+            background-position:0px -240px; 
+            cursor: pointer;/*마우스 포인터 모양을 변경하여 하이퍼 링크가 걸린것처럼 보이게함*/
+            text-indent: -99999PX;
+        }
+        .total_mnu{
+            width: 100%;
+            background-color: rgba(0, 0, 0, .8);
+            height: 500px;
+            color:#ffffff;
+            position: absolute;
+            left: 0px;
+            top: 107px;
+            display: none;
+        }
+        #toggle{display: none;}
+        #toggle:checked + header .total_mnu{display:block;}
+        #toggle:checked + header label[for=toggle]{background-position: -210px -240px;}
+
+        .gnb{
+            width: 201px;
+            background-color: #6495ed;
+        }
+        /* .gnb>li{} */
+        .gnb>li:nth-child(2)>a{background-position:0px -44px;}
+        .gnb>li:nth-child(3)>a{background-position:0px -88px;}
+        .gnb>li:nth-child(4)>a{background-position:0px -132px;}
+        .gnb>li:nth-child(5)>a{background-position:0px -178px;}
+        .gnb>li:nth-child(6)>a{background-position:0px -222px;}
+        .gnb>li:nth-child(7)>a{background-position:0px -266px;}
+        .gnb>li:nth-child(8)>a{background-position:0px -310px;}
+        .gnb>li:last-child>a{background-position:0px -354px;}
+        .gnb>li>a{
+            display: block;
+            line-height: 44px;
+            background-image: url(./exam_img/main.png);
+            text-indent: -9999px;
+        }
+        .gnb>li>a:hover{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle">
+
+    <header>
+        <h1>
+            <a href="index.html" title="mainpage 바로가기">지마켓</a>
+        </h1>
+        <label for="toggle">전체메뉴</label>
+        <nav class="total_mnu">전체메뉴</nav>
+        <nav>
+            <ul class="gnb">
+                <li><a href="#" title="브랜드패션">브랜드패션</a></li>
+                <li><a href="#" title="패션의류 &middot; 잡화 &middot; 뷰티">패션의류 &middot; 잡화 &middot; 뷰티</a></li>
+                <li><a href="#" title="유아동">유아동</a></li>
+                <li><a href="#" title="식품 &middot; 생필품">식품  생필품</a></li>
+                <li><a href="#" title="홈데코">홈데코 &middot; 문구 &middot; 취미</a></li>
+                <li><a href="#" title="컴퓨터">컴퓨터&middot;디지털&middot;가전</a></li>
+                <li><a href="#" title="스포츠">스포츠&middot;건강</a></li>
+                <li><a href="#" title="자동자">자동자&middot;공구</a></li>
+                <li><a href="#" title="여행">여행&middot;도서&middot;티켓&middot;e쿠폰</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
