@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+    <style>
+        .g_wrap{
+            width: 1280px;
+            margin: 0px auto;
+            background-color: #ccc;
+            padding: 10px;
+            display:grid;
+            grid-gap: 10px;
+            /* grid-template-columns: repeat(3,auto);
+            grid-template-columns: auto auto auto;
+            grid-template-columns: 300px auto auto; */
+            grid-template-columns: 300px 1fr 1fr; /*fraction = 1 대 1 비율로 나눈다.*/
+            grid-template-rows: repeat(2,50px);
+        }
+        .g_wrap *{
+            background-color: #333;
+        }
+        .g_wrap2{
+            width: 1280px;
+            margin: 0px auto;
+            background-color: #ccc;
+            padding: 10px;
+            display:grid;
+            grid-gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr; /*fraction = 1 대 1 비율로 나눈다.*/
+            grid-template-rows: repeat(2,60px);
+        }
+        .g_wrap2 *{
+            background-color: #333;
+        }
+        .g_wrap2>.item1{
+            /* grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 1;
+            grid-row-end: 3; */
+            grid-area: 1/1/3/2;
+        }
+        .g_wrap2>.item4{
+            grid-area: 2/2/3/4;
+        }
+    </style>
+</head>
+<body>
+    <h2>grid layout</h2>
+    <p>가로축, 세로축 2차원 배열을 하기 위한 layout</p>
+    <p>grid 속성은 flex 속성과는 다르게 두 방향(가로, 세로)으로 layout을 만들기 위한 System이다.</p>
+    <p>grid는 부모요소(contaner)안에 자식요소를 배치하는데 자식요소를 보통 'grid item'이라고 한다.</p>
+    <p>flex 속성처럼 부모요소에 display:grid; 속성을 적용한다.</p>
+    <p>css 학습 참고 사이트 - https://www.w3schools.com/css/css_grid.asp</p>
+    <p>css grid 속성을 학습하기 위한 게임 사이트 - http://cssgridgarden.com/#ko</p>
+
+    <h3>1. 그리드 레이아웃 기본</h3>
+    <section class="g_wrap">
+        <article class="item1">1</article>
+        <article class="item2">2</article>
+        <article class="item3">3</article>
+        <article class="item4">4</article>
+        <article class="item5">5</article>
+        <article class="item6">6</article>
+    </section>
+    <h3>1. 그리드 레이아웃 병합</h3>
+    <section class="g_wrap2">
+        <article class="item1">1</article>
+        <article class="item2">2</article>
+        <article class="item3">3</article>
+        <article class="item4">4</article>
+        <!-- <article class="item5">5</article> -->
+        <!-- <article class="item6">6</article> -->
+    </section>
+</body>
+</html>

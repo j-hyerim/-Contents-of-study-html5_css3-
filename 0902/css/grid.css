@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+/* 첫번째 그리드 레이아웃 */
+.grid_wrap{
+    width: 1280px;
+    /* height: ; */
+    margin:0px auto;
+    background-color:rgb(129, 190, 159);
+    padding:10px;
+    display: grid; /*자식요소 그리드 방식적용*/
+    grid-gap: 10px; /*자식요소 간격 적용*/
+    /* grid-template-columns: 420px 420px 420px; */
+    grid-template-columns: auto auto auto; /*세로간격 배분*/
+    /* grid-template-rows:50px 30px 100px; */
+    grid-template-rows:repeat(3,50px); /*가로간격 배분*/
+}
+.item{
+    background-color:rgb(188, 241, 224);
+    text-align: center;
+    font-size:30px;
+}
+
+/* 두번째 셀병합하기 */
+.grid_wrap2{
+    width: 1280px;
+    margin: 0px auto;
+    background-color:rgb(201, 174, 139);
+    padding: 10px;
+    display: grid;
+    grid-gap:10px;
+    /* grid-template-columns: auto auto auto; */
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(3,50px);
+}
+.grid_wrap2>.item{
+    background-color: antiquewhite;
+}
+.grid_wrap2>div:first-child{
+    /* grid-area: 1/1/3/3; 1행, 1열부터 3행, 3열까지 병합하겠다. */
+    grid-row-start:1; /*1행부터 시작하라*/
+    grid-row-end:3; /*3행까지 쓰겠다*/
+    grid-column-start: 1;
+    grid-column-end: 3;   
+}
+
+/*Example */
+.grid_wrap3{
+    width: 1280px;
+    margin: 0px auto;
+    background-color: rgb(152, 128, 173);
+    padding: 10px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(6,auto);
+    grid-template-rows: repeat(5,50px);
+}
+.grid_wrap3>.item{
+    background-color: rgb(213, 176, 248);
+}
+.grid_wrap3>div:nth-child(8){
+    grid-area: 1/2/5/6;
+}
+
+/* 그리드 레이아웃을 활용한 레이아웃 */
+.grid_wrap4{
+    width: 1280px;
+    background-color: rgb(206, 134, 122);
+    margin: 0px auto;
+    padding: 10px;
+    display: grid;
+    grid-gap: 10px;
+    /* grid-template-rows: repeat(5,100px); */
+    /* grid-template-columns: repeat(1,auto); */
+    grid-template-areas: 
+    "header header header header header header"
+    "nav main main main right right"
+    "nav footer footer footer footer footer"
+}
+.grid_wrap4>*{
+    background-color: rgb(255, 187, 176);
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 30px;
+}
+.item1{
+grid-area:header;
+}
+.item2{
+grid-area: nav;
+}
+.item3{
+grid-area: main;
+}
+.item4{
+grid-area: right;
+}
+.item5{
+grid-area: footer;
+}

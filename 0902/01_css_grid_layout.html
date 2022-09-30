@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_grid_layout</title>
+    <link rel="stylesheet" href="./css/grid.css" type="text/css">
+</head>
+<body>
+    <h2>css_grid_layout</h2>
+    <p>grid 속성은 flex 속성과는 다르게 두 방향( 가로, 세로 )으로 layout을 만들기 위한 System이다.</p>
+
+    <dl>
+        <dt>web page에서 layout을 구성하기 위한 기술</dt>
+        <dd>table</dd>
+        <dd>float:left,right</dd>
+        <dd>display:inline-block</dd>
+        <dd>display:inline</dd>
+        <dd>display:flex (1차원, 가로축 or 세로축)</dd>
+        <dd>display:block</dd>
+        <dd>display:table</dd>
+        <dd>display:grid (2차원, 가로 and 세로)</dd>
+    </dl>
+    <h3>1. GRID Columns (열)</h3>
+    <img src="./img/column.png" alt="열">
+    <h3>2. GRID Row (행)</h3>
+    <img src="./img/row.png" alt="행">
+
+    <h3>3. GRID Gap (여백)</h3>
+    <img src="./img/gap.png" alt="여백">
+
+    <h3>4. GRID Line (기준선)</h3>
+    <img src="./img/line.png" alt="기준선">
+
+    <h3>5. GRID Container (부모속성)</h3>
+    <p>Grid Layout에서 부모역할을 하기 위한 html Tag element이며 display:grid, display:inline-grid 속성 값을 지정할 수 있다.</p>
+    <p>부모요소의 이름을 보통 'container', 자식요소의 이름을 'item'이라고 하며, grid는 coulumn, row item으로 구성된다.</p>
+
+    <ul>
+        <li>display</li>
+        <li>grid-template-columns</li>
+        <li>grid-template-rows</li>
+        <li>grid-template-areas</li>
+        <li>grid-template</li>
+        <li>grid-gap, grid-column-gap, grid-row-gap</li>
+        <li>justify-items, align-items, place-items</li>
+        <li>justify-content, align-content, place-content</li>
+        <li>grid-auto-columns</li>
+        <li>grid-auto-rows</li>
+        <li>grid-auto-flow</li>
+        <li>grid</li>
+    </ul>
+    
+    <h3>GRID item 속성</h3>
+    <p>grid layout에서 부모요소의 자식요소들을 item이라고 하며, item들이 병합하고자 할 때 열, 행 번호, 영역의 이름을 따로 지정하여 설정할 수 있다.</p>
+    <ul>
+        <li>grid-column : item의 열 시작위치 번호와 끝 번호를 지정하여 병합하고자 할 때 사용한다.   ex) 1/5</li>
+        <li>grid-row : item의 행 시작위치 번호와 끝 번호를 지정하여 병합하고자 할 때 사용한다.   ex) 1/4</li>
+        <li>grid-column, grid-row 속성은 각각 grid-column-start, grid-column-end, grid-row-start, grid-row-end 속성으로도 사용 가능하다.</li>
+        <li>grod-column-start, grid-column-end</li>
+        <li>grid-row-start, grid-row-end</li>
+        <li>grid-column, grid-row</li>
+        <li>grid-area</li>
+        <li>justify-self, align-self, place-self</li>
+    </ul>
+
+    <h3>GRID LAYOUT 기본 개념</h3>
+    <article class="grid_wrap">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="item">item5</div>
+        <div class="item">item6</div>
+        <div class="item">item7</div>
+        <div class="item">item8</div>
+        <div class="item">item9</div>
+    </article>
+
+    <h3>GRID LAYOUT 셀 병합</h3>
+    <article class="grid_wrap2">
+        <div class="item">item1</div>
+        <!-- <div class="item">item2</div> -->
+        <!-- <div class="item">item3</div> -->
+        <!-- <div class="item">item4</div> -->
+        <div class="item">item5</div>
+        <div class="item">item6</div>
+        <div class="item">item7</div>
+        <div class="item">item8</div>
+        <div class="item">item9</div>
+    </article>
+
+    <h3>GRID LAYOUT Example</h3>
+    <article class="grid_wrap3">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="item">item5</div>
+        <div class="item">item6</div>
+        <div class="item">item7</div>
+        <div class="item">item8</div>
+        <div class="item">item9</div>
+        <div class="item">item10</div>
+        <div class="item">item11</div>
+        <div class="item">item12</div>
+        <div class="item">item13</div>
+        <div class="item">item14</div>
+        <div class="item">item15</div>
+    </article>
+
+    <h3>Webpage GRID LAYOUT</h3>
+    <div class="grid_wrap4">
+        <header class="item1">header</header>
+        <nav class="item2">nav</nav>
+        <article class="item3">main content</article>
+        <article class="item4">right content</article>
+        <footer class="item5">footer</footer>
+    </div>
+</body>
+</html>

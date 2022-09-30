@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css3_추가속성 학습하기</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <script src="./prefixfree.min.js"></script>
+</head>
+<body>
+    <h2>css3_추가속성 학습하기</h2>
+    <p>css Level.3 version에서 추가된 속성에 대해 학습한다.</p>
+    <ul>
+        <li>1. multiple column p.160</li>
+        <li>2. grid - 2차원 배열 p.160</li>
+        <li>3. border-radius p.170</li>
+        <li>4. opacity - 투명도 p.179</li>
+        <li>5. background p.183</li>
+        <li>6. flex - 2차원 배열(가로축, 세로축) p.192</li>
+        <li>7. transition - 전환, animation, 시간속성 p.201</li>
+        <li>8. shadow - text, box</li>
+        <li>9. transform(x,y,z) - 크기 변형, 회전, 기울기, 좌표변경</li>
+        <li>10. @keyframes, animation - 시나리오를 통한 자동 animation 구현</li>
+        <li>11. 기타 - user interface(box-sizing, resize, outline, calc(width-20);</li>
+    </ul>
+
+    <h3>1. border-radius</h3>
+    <p>사용자가 선택한 요소에 모서리 부분을 둥글게 만드는 속성이다</p>
+    <p>button, box의 모서리를 유연하게 처리하기 위해 사용하며, image에도 적용이 가능하다.</p>
+    <p>border-radius : px, % or border-radius : 0px 0px 0px 0px; (왼쪽 상단부터 시계방향)</p>
+    <div class="box box01"></div>
+    <div class="box box02"></div>
+    <div class="box box03"></div>
+    <div class="box box04"></div>
+    
+
+    <h3>2. 배경색 gradient 넣기</h3>
+    <div class="box05">가로방향</div>
+    <div class="box06">원형</div>
+    <div class="box07">colorzillar.com을 이용하기</div>
+    
+    <h3>3. shadow 속성</h3>
+    <p class="p01">그림자 속성은 text, image, block element에 그림자 효과를 적용하고자 할 때 사용한다.</p>
+    <p class="p02">[ 작성법 ] text-shadow or box-shadow : x y offset color;</p>
+    <div class="ib">
+        <img src="./images/10.jpg" alt="커피" id="img1">
+    </div>
+    
+    <div class="ib2">
+    <img src="./images/10.jpg" alt="커피" id="img2">
+    </div>
+    <h3>4. transform (2d,3d) -변형</h3>
+    <p>transform 속성을 사용하여 사용자가 선택한 요소의 크기를 변경(scale), 기울기(skew), 회전(rotate), 위치이동(translate) 을 하기 위한 속성이다. </p>
+    <ul>
+        <li>scale - 크기를 조정하기 위한 속성으로서 % 단위를 소수점으로 환산하여 입력한다.</li>
+        <li>skew - 기울기를 위한 속성으로서 각도 입력시 단위 'deg'를 입력한다.</li>
+        <li>rotate - 회전을 위한 속성으로서 각도 입력시 단위 'deg'를 입력한다.</li>
+        <li>translate - 위치를 지정하기 위한 속성으로서 position:relative 속성과 비슷하다.</li>
+    </ul>
+
+    <div class="box08">크기변형</div>
+    <div class="box09">기울기</div>
+    <div class="box10">회전</div>
+    <div class="box11">위치이동</div>
+
+    <h3>5. transition - 전환</h3>
+    <p>transition(전환) 속성은 사용자가 선택한 html element에 마우스를 올리거나 click 을 했을 때, 첫 장면에서 마지막 장면으로 자연스럽게 넘어가는 효과를 구현하고자 할때 사용한다. </p>
+    <p>mobile toggle menu를 click 할 때 부드럽게 나오는 animation, pc 화면에서 main navigation을 마우스 오버시 나오는 sub menu, main화면에 좌, 우 버튼 클릭 시 슬라이드 되는 이미지 등 다양한 곳에 활용이 가능하다.</p>
+    
+    <h4>전환속성으로 마우스 오버시 박스크기 조정하기</h4>
+    <div class="box12"></div>
+    <h4>전환속성으로 마우스 오버시 메뉴에 효과주기</h4>
+    <ul class="gnb">
+        <li><a href="#" title="">HOME</a></li>
+        <li><a href="#" title="">ABOUT US</a></li>
+        <li><a href="#" title="">ABOUT US</a></li>
+        <li><a href="#" title="">ABOUT US</a></li>
+        <li><a href="#" title="">ABOUT US</a></li>
+        <li><a href="#" title="">ABOUT US</a></li>
+    </ul>
+
+    <h4>전환속성으로 이미지 마우스 오버시 크게, 캡션 나오게 하기</h4>
+    <div class="box13">
+        <img src="./images/photo.jpg" alt="photo">
+        <p>9월 초특가 이벤트</p>
+    </div>
+
+    <p>CSS에서 사용된 속성들은 브라우저의 종류별, 버전별 호환성 여부를 확인하고 사용해야 한다. 사용자의 시스템, 브라우저 버전에 따라 서식이 적용 될 수도, 안 될 수도 있기때문에 앞으로 새로 추가되는 속성들은 호환성을 고려하여 브라우저 별로 속성앞에 '접두사'를 붙여서 임시로 적용해야한다.</p>
+    <p>접두사를 일일히 붙여주면 소스코드가 많아지고 개발자의 입장에서 귀찮은데, 이것을 자동으로 붙여주는 스크립트를 사용하면 더이상 신경을 쓰지 않아도 된다.</p>
+    <p>https://projects.verou.me/prefixfree/
+        사이트를 방문하여 왼쪽 상단 동그란 메뉴를 마우스 오른쪽 메뉴를 클릭하여 js 파일을 다운로드 하고 현재 문서에 script src="" 로 연결한다.
+    </p>
+
+    <div class="libon">
+        <a href="#" title="a">
+            Fork me on Github
+        </a>
+    </div>
+</body>
+</html>
