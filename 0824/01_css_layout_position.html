@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_css_layout_position</title>
+    <style>
+        ul,li{
+            padding: 0px;
+            list-style:none;
+        }
+        ul{
+            padding: 10px;
+            background-color: #cccccc;
+            width: 600px;
+        }
+        ul>li{
+            border: 2px solid #ff0000;
+            margin:5px;
+            background-color: antiquewhite;
+        }
+        .list01{text-align: center;}
+        .list01 >li{display:inline; width: 130px; height: 40px;}
+
+        .list02{text-align: center;}
+        .list02>li{display:inline-block; width: 130px; height: 40px;}
+
+        .list03::after{ /*부모요소 list 03의 뒤쪽에 가상으 ㅣ빈공간을 만들어서 부모의 높이를 다시 살린다.*/
+            content:"";
+            clear: both;
+            display: block;
+        }
+        /* float 가운데 정렬 주는 법 */
+        /* .list03>li:first-child{margin-left: 130.8px;} */
+        /* .list03>li{float: left; position: relative; left:130px ;} */
+        .list03>li{float: left; transform:translateX(130px)}
+        
+        h3{clear: left;}
+
+        .list04{display:flex;justify-content: center;}
+    </style>
+</head>
+<body>
+    <h2>01_css_layout_position</h2>
+    <p>web page의 contents를 배치하기 위한 방법으로는 table, float, flex, grid방식의 종류가 있다.</p>
+    <p>이 중에서 css를 이용하여 contents를 가로방향으로 배치하는 방법에는 요소의 성격인 block, inline, inline-block, flex, grid, none, table, table-row, table-cell . . . 중에 display:inline, display:inline-block, float:left, display:flex를 사용하여 적용해 본다.</p>
+
+    <h3>1. display:inline 방식으로 block 요소를 가로방향으로 배치하기</h3>
+    <ul class="list list01">
+        <li>자식요소1</li>
+        <li>자식요소2</li>
+        <li>자식요소3</li>
+        <li>자식요소4</li>
+    </ul>
+
+    <h3>2. display:inline-block 방식으로 block 요소를 가로방향으로 배치하기</h3>
+    <ul class="list list02">
+        <li>자식요소1</li>
+        <li>자식요소2</li>
+        <li>자식요소3</li>
+        <li>자식요소4</li>
+    </ul>
+
+    <h3>3. float:left 방식으로 block 요소를 가로방향으로 배치하기</h3>
+    <ul class="list list03">
+        <li>자식요소1</li>
+        <li>자식요소2</li>
+        <li>자식요소3</li>
+        <li>자식요소4</li>
+    </ul>
+
+    <h3>4. display:flex 방식으로 block 요소를 가로방향으로 배치하기</h3>
+    <ul class="list list04">
+        <li>자식요소1</li>
+        <li>자식요소2</li>
+        <li>자식요소3</li>
+        <li>자식요소4</li>
+    </ul>
+
+</body>
+</html>

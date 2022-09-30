@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_position p.188</title>
+    <style>
+        div{
+            width: 100px;height: 100px;
+        }
+        .box01{background-color: rgb(255, 0, 0); position: absolute; left: 50px;}
+        .box02{background-color: rgb(255, 123, 0); position: absolute; top: 50px;}
+        .box03{background-color: rgb(255, 238, 0); position: absolute; right: 150px;}
+
+        .box04{background-color: rgb(0, 102, 255); position:relative; top:50px}
+        .box05{background-color: blueviolet; position: relative; left: 300px; top: 100px;}
+        .box06{width: 150px; height: 300px;
+            background-color: rgb(17, 255, 0);
+            position: fixed;
+            border: 1px solid #04b60d;
+            right: 100px; bottom: 100px;
+            text-align: center;
+            
+        }
+        .box06>a{
+            padding :3px 10px;
+            font-size: 12px;
+            border-radius: 20px;
+            background-color: #f08a8a;
+            transition: 0.5s;
+        }
+        .box06>a:hover{
+            background-color: #474747;
+            color: aliceblue;
+        }
+        header{
+            width: 1280px;height: 200px;
+            background-color: #ccc;
+            margin: 0px auto;
+            position: relative;
+        }
+        header>h1{
+            width: 100px;height: 100px; background-color: #fff000;
+            position: absolute; left: 590px;
+        }
+        header>.left_n, header>.right_n{
+            width: 200px;
+            height: 50px;
+            background-color: yellowgreen;
+            position: absolute;
+        }
+        header>.right_n{
+            left: 1080px;
+        }
+        header>.gnb{
+            width: 1280px;
+            height: 50px;
+            background-color: rgb(77, 48, 48);
+            position: absolute;
+            bottom: 0px;
+        }
+       
+    </style>
+</head>
+<body>
+    <h2>02_position p.188</h2>
+    <p>position 속성이란? layout 작업 시 사용자가 부모 요소 Box 안에서 원하는 content를 선택하여 배치하기 위한 속성으로서 static(요소가 가지고 있는 기본값), absolute(절대배치), relative(상대배치), fixed(고정배치), inherit(상속)의 종류가 있다.</p>
+    <p>position 속성 사용시 위치를 지정하기 위해서는 top, bottom, right, left 속성을 사용한다.</p>
+    <p>Position 속성을 사용하면 float 속성처럼 content와 content끼리 겹침 현상이 나타나는데, 위, 아래 순서를 변경하고자 할 때는 z-index 속성을 사용한다.</p>
+    <p>z-index 속성은 먼저 작성된 Tag의 z-index값을 0으로 주며, 나중에 작성된 Tag는 순서대로 자동 번호가 매겨진다. z-index 속성을 사용하여 위, 아래 순서도 변경이 가능하다.</p>
+
+    <h3>1. absolute</h3>
+    <div class="box01"></div>
+    <div class="box02"></div>
+    <div class="box03"></div>
+
+    <h3>2. relative</h3>
+    <div class="box04"></div>
+    <div class="box05"></div>
+
+    <h3>3. fixed</h3>
+    <div class="box06"><a href="#" title="위로 바로가기">top</a></div>
+
+    <h3>실습예제-베스킨라빈스 상단 헤더 따라 만들기</h3>
+    <header>
+        <h1>상단로고</h1>
+        <nav class="left_n">sns</nav>
+        <nav class="right_n">search</nav>
+        <nav class="gnb">main_menu</nav>
+    </header>
+    <p>position 공식 : 부모박스에 relative , 자식요소에 absolut를 설정하면 부모가 움직일때 자식도 같은 방향으로 움직인다</p>
+</body>
+</html>

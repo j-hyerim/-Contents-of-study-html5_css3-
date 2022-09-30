@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_html5_add_form</title>
+    <style>
+        .market{
+            width:300px;
+            margin:0px auto;
+            text-align:center;
+            border:none;
+        }
+        .market > legend{
+            text-align:center;
+            font-weight:bold;
+        }
+        .market > label{display:none;}
+        .market > input{
+            width:190px;
+            margin:4px 0px;
+            height:24px;
+        }
+        .market p{text-align:right}
+        .market a{
+            font-size:12px;
+            color:#333333;
+            text-decoration:none;
+        }
+        .btn01, .btn02{width:200px;padding:30px 0px;}
+        .btn01{
+            background-color: #5f0080;
+            color:#ffffff;
+            border:none;
+            font-weight:bold;
+            border-radius:3px;
+        }
+        .btn02{
+            border:1px solid #5f0080;
+            background-color: #ffffff;
+            color:#5f0080;
+            font-weight:bold;
+            border-radius:3px;
+        }
+    </style>
+</head>
+<body>
+    <h2>01_html5 추가폼 태그와 속성들 p.82</h2>
+    <p>html5에서 추가된 폼태그와 속성들은 현재 사용하고 있는 브라우저(크롬, MS EDGE, 파이어폭스, 사파리, 웨일, 스윙....)에서 버전 별 지원을 하기 때문에 지원상황을 확인하고 사용해야 한다.</p>
+    <p>http://www.caniuse.com(브라우저 버전별 태그 지원 유무 확인 사이트)</p>
+    <ul>
+        <li>fieldset, legend</li>
+        <li>search</li>
+        <li>email</li>
+        <li>url</li>
+        <li>tel</li>
+        <li>number</li>
+        <li>range</li>
+        <li>date</li>
+        <li>datetime</li>
+        <li>month</li>
+        <li>week</li>
+        <li>time</li>
+        <li>color</li>
+        <li>progress</li>
+    </ul>
+
+    <h3>1. 폼양식 그룹을 지정하기 위한 요소 - fieldset, legend</h3>
+    <fieldset>
+        <legend>필수입력정보</legend>
+        <label for="id">아이디 : </label><input type="text" id="id"><br>
+        <label for="pass">비밀번호 : </label><input type="password" id="pass">
+    </fieldset><br><br><br><br>
+
+    <form name="폼이름" method="post" action="받을서버주소">
+    <fieldset class="market">
+        <legend>로그인</legend>
+        <label for="id">아이디 : </label><input type="text" id="mid" placeholder="아이디를 입력하세요"><br>
+        <label for="password">비밀번호 : </label><input type="password" id="mpass" placeholder="패스워드를 입력하세요">
+        <p>
+            <a href="#" title="아이디 찾기">아이디찾기</a> &#x007c;
+            <a href="#" title="비밀번호 찾기">비밀번호 찾기</a>
+        </p>
+        <input type="submit" value="로그인" class="btn01"><br>
+        <input type="button" value="회원가입" class="btn02">
+    </fieldset>
+
+    <p>placeholder : 사용자가 입력할 내용을 미리 알려주어 오류가 나지 않도록 방지해줌. 웹접근성 측면에서 도움이 많이 됨.</p>
+    <p>2. search : 사용자가 입력 양식에 키워드를 입력하여 검색할 수 있도록 하고자 할 때 사용하는 양식으로서 단어를 입력하면 오른쪽 끝에 'X'표시가 뜨며 클릭시 내용이 삭제됨. </p>
+    <input type="search" placeholder="8월 초특가 여름 마지막 세일">
+    <input type="button" value="검색">
+
+    <p>3. email : 이메일 주소를 입력하기 위한 박스로서 입력양식이 맞지 않을 경우 에러가 난다.</p>
+    <label>이메일 주소 : </label>
+    <input type="email" placeholder="id@domain.co.kr">
+    
+    <p>4. url : 사용자가 도메인 주소를 입력할 수 있도록 하는 양식이며, 주소형식이 맞지 않을 경우 에러메세지가 나온다.</p>
+    <input type="url" placeholder="http://도메인명.co.kr or com">
+
+
+    <p>5. tel : 전화번호를 입력하기 위한 양식(모바일에서 키패드가 뜬다)</p>
+    <input type="tel" placeholder="010-0000-0000">
+
+    <p>6. number : 숫자를 입력하기 위한 양식으로 직접입력하거나 버튼을 사용하여 설정</p>
+    <input type="number">
+
+    <p>7. range : 숫자범위를 슬라이드바로 조정</p>
+    <input type="range">
+
+    <p>8. date : 년, 월, 일을 선택하기 위한 요소로서 클릭시 달력 창이 활성화됨.(예약, 예매)</p>
+    <input type="date">
+
+    <p>9. datetime : 연, 월, 일, 시, 분까지 선택하기 위한 요소로서 html5에서 없어졌다가 5.1부터 다시 사용</p>
+    종료날짜 : <input type="datetime" value="2022-08-24">
+
+    <p>10. month : 년도와 월을 선택하기 위한 양식</p>
+    <input type="month">
+
+    <p>11. week : 년도와 주를 선택하기 위한 양식</p>
+    <input type="week">
+
+    <p>12. time : 시, 분을 선택하기 위한 양식</p>
+    <input type="time">
+
+    <p>13. color : 색상을 선택하기 위한 양식</p>
+    <input type="color">
+
+    <p>14. progress : 진행정도를 나타내는 바를 만들기 위한 태그로서 max, value 속성을 사용</p>
+    <progress value="100" max="100"></progress><label>100% html5</label><br>
+    <progress value="50" max="100"></progress><label>50% css3</label><br>
+    <progress value="30" max="100"></progress><label>30% javascript</label>
+
+    <p>15. 모바일 화면에서 사용이 가능한 '통화버튼', 'sms 버튼' 만들기</p>
+    <a href="tel:01000000000" title="상담전화" class="t_btn">상담전화</a>
+    <a href="sms:01000000000" title="상담문자" class="s_btn">상담 문자보내기</a>
+
+
+    <input type="submit" value="확인">
+
+</form>
+<style>
+    .t_btn, .s_btn{
+        padding:5px 20px;
+        color:#ffffff;
+        text-decoration:none;
+        border-radius:14px;
+    }
+    .t_btn{background-color:rgb(92, 167, 92)}
+    .s_btn{background-color:rgb(77, 174, 212)}
+</style>
+</body>
+</html>

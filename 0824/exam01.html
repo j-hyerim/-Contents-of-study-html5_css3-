@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습예제-해외패키지</title>
+    <style>
+        *{
+            margin: 0px; padding: 0px;
+        }
+        main>article{
+            width: 1280px; 
+            height: 600px;
+            border: 5px solid #000;
+            margin: 0px auto;
+            position: relative;
+        }
+        article>h2{
+            text-align: center;
+            line-height: 90px;
+        }
+        article>h2>span{
+            font-weight: lighter;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        ul>li{
+            margin: 10px;
+        }
+        .b1{
+            top: 45%;
+            right: 0px;
+            position: absolute;
+        }
+        .b2{
+            position: absolute;
+            top: 45%;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <h2><span>해외패키지</span> 인기 기획전</h2>
+            <ul>
+                <li class="poto1"><img src="./img01/photo_01.jpg" alt="사진"></li>
+                <li class="poto2"><img src="./img01/photo_02.gif" alt="사진"></li>
+                <li class="poto3"><img src="./img01/photo_03.png" alt="사진"></li>
+                <li class="poto4"><img src="./img01/photo_04.bmp" alt="사진"></li>
+            </ul>
+            <a href="#" class="b1"><span><img src="./img01/right_btn.png" alt="오른쪽 버튼"></span></a>
+            <a href="#" class="b2"><span><img src="./img01/left_btn.png" alt="왼쪽 버튼"></span></a>
+
+        </article>
+        <p>
+            <a href="http://validator.kldp.org/check?uri=referer"
+              onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+              src="//validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a>
+          </p>
+          <p>
+            <a href="http://css-validator.kldp.org/check/referer">
+                <img style="border:0;width:80px;height:15px"
+                    src="//css-validator.kldp.org/images/validate/css-blue"
+                    alt="올바른 CSS입니다!" />
+            </a>
+        </p>
+    </main>
+    
+    
+</body>
+</html>

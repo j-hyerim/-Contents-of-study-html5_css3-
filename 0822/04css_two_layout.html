@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_web표준 layout 2단</title>
+    <style>
+        header, main, footer{
+            width: 1280px;
+            margin: 0px auto;
+        }
+        header{
+            background-color:#ce93d8;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+        main{
+            background-color: #fff1ff;
+            height: 600px;
+            margin-bottom: 10px;
+        }
+        main > section{
+            width: 800px;
+            height: 500px;
+            background-color: #f3e5f5;
+            float: left;
+        }
+        main > article{
+            width: 480px;
+            height: 300px;
+            float: right;
+            background-color: #dbb7e0;
+        }
+        footer{
+            height: 90px;
+            background-color:#af8eb5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        naver : 1130px, 다음 : 1080px, nate : 1020, 마켓컬리 : 1050, 11번가 : 1240
+    </header>
+    <main>
+        <section>1단 800</section>
+        <article>2단 480</article>
+    </main>
+    <footer>
+        footer영역
+    </footer>
+</body>
+</html>

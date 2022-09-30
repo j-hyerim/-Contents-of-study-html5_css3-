@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지니펫 모바일 메인 페이지</title>
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <style>
+        body{
+            font-family: "맑은 고딕",arial,sans-serif;
+            font-size: 12px;
+            color: #333333;
+        }
+        a{
+            color: #333333;
+            text-decoration: none;
+        }
+        #toggle{
+            display: none;
+        }
+        header{
+            height: 64px;
+            background-color: #333;
+            position: relative;
+        }
+        header>h1{
+            text-align: center;
+        }
+        header > h1 img{
+            height: 50px;
+            padding: 7px;
+        }
+        header label[for="toggle"] img, .c_btn{
+            position: absolute;
+            top: 11px;
+        }
+        header label[for="toggle"]{
+            left: 10px;
+        }
+        header .c_btn{
+            right: 10px;
+        }
+        header label[for="toggle"] img, .c_btn img{
+            width: 40px;
+        }
+        #slide >h2 {display: none;}
+        #slide{
+            height: 762px;
+            background-image: url(./images/mo_bg_01.jpg);
+            background-repeat: no-repeat;/*배경 이미지 한번만 나옴*/
+            background-position: center;/*배경이미지를 위치 가운데로 배치*/
+            text-align: center;
+        }
+        footer{
+            background-color: #333;
+            text-align: center;        
+            padding: 10px 0px;
+            color: #ffffff;
+        }
+        footer>p{color: #ffffff; line-height: 40px;}
+        footer>address{
+            font-style: normal;
+        }
+
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="toggle">
+
+    <header>
+        <h1>    
+            <a href="mindex.html" title="mainpage로 바로가기">
+                <img src="./images/logo_clr.png" alt="상단로고">
+            </a>
+        </h1>
+
+    <label for="toggle"><img src="./images/topIcon_burger.png" alt="전체메뉴"></label>
+    <a href="cart.html"title="장바구니 페이지 바로가기">
+        <img src="./images/topIcon_cart.png" alt="장바구니" class="c_btn">
+    </a>
+    </header>
+
+    <main>
+        <article>
+            <!-- <h2>메인슬라이드</h2> -->
+            <img src="./images/mo_txt_01.png" alt="배경 위 텍스트 " id="slide">
+            <!-- <img src="./images/mo_bg_01.jpg" alt="배경"> -->
+        </article>
+        <section>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>회사정보, 하단로고, 개인정보취급방침, 이용약관, 패밀리사이트</p>
+        <address>
+            주소 카피라이트
+        </address>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01css_selector_rank(명시도)</title>
+    <style>
+        body{font-family: "맑은 고딕";}
+        h2{font-size: 30px;}
+        header {
+            font-family: "바탕체";
+        }header > span {
+            font-family: "궁서체";
+            background-color: yellow;
+        }
+        #color02{color: violet;} /*class 보다 id 가 먼저 적용된다.*/
+        .color01{color: yellowgreen !important;}
+
+        /* control button css */
+        /* .c_btn{
+
+        } */
+        .c_btn > li{
+            list-style:none;
+            background-color: #ccc;
+            width: 15px; height: 15px;
+            display: inline-block;
+            border-radius:50px;
+        }
+        .on {
+            background-color: #ff0000 !important;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>01css_selector_rank</h2>
+    <p>css는 서식을 적용할 때 첫줄부터 적용하고, 아래줄에 있는 서식을 순차적으로 내려가면서 적용한다. 이것을 cascading이라고 하며, 만약 부모 Tag에 서식이 적용되어 있다면 부모의 서식을 기준으로 상속받아 아래 요소의 서식이 적용된다. 이런 우선순위 규칙을 Style overloading 이라고 한다.</p>
+
+    <h3>css 선택자 우선순위</h3>
+    <p> !important > inline > #id > .class > tag > 외부 서식 순으로 적용된다.</p>
+    <header>
+        <span id="color02" class="color01" style="color: #ccc;">글자 모양 변경하기 (바탕체)</span>
+    </header>
+    <h3>control button 구현하기</h3>
+    <ul class="c_btn">
+        <li class="on">&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+    </ul>
+    <img src="./images/point.png" alt="">
+    <p>선택자의 종류에 따라 명시도 점수가 달라진다. 그림에서 보는 바와 같이 Inline Style은 1000점, #id 선택자는 100점, .class, 속성, 의사class 선택자는 10점, tag선택자는 1점을 부여받는다.</p>
+    <p>선택자 사용 시 '부모 > 자식요소' 또는 '부모 후손' 처럼 사용하면 더 많은 명시도 점수를 얻을 수 있다.</p>
+    <p>ex ) ul#primary-nav li.active 는 명시도 몇 점? <br>0112점 [ ul = 1 id = 100 li = 1 class = 10 ]</p>
+    <!-- ul = 1 id = 100 li = 1 class = 10 -->
+    <p>ex ) p > span {color:blue;} 와 div span {color:rad;} 는 명시도 몇 점? <Br>2점 [ p = 1 span = 1 / dic = 1 span = 1 ]</p>
+    <!-- p = 1 span = 1 / dic = 1 span = 1 -->
+</body>
+</html>

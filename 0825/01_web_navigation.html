@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_Web_navigation</title>
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <style>
+        h2,h3,p{padding:10px;}
+
+
+/* 1번째 */
+
+        .gnb01{
+            background-color: #333;
+            width: 200px;
+        }
+        /* .gnb01>ul{   } */
+        .gnb01>ul>li{
+            line-height: 40px;
+            text-align: center;
+        }
+        .gnb01>ul>li>a{
+            color:#fff;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            transition: 0.5s; /*마우스 오버, 아웃시 둘다 애니메이션 적용이 됨*/
+            
+        }
+        .gnb01>ul>li>a:hover{
+            background-color: rgb(189, 189, 189);
+            color: rgb(0, 0, 0);
+        }
+
+
+/* 2번쨰 */
+
+        .gnb02{
+            width: 100%; height: 42px;
+            background-color:#0D4633;
+        }
+        .gnb02>ul{
+            width: 1000px;
+            margin: 0px auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        .gnb02>ul>li{
+            line-height: 40px;
+        }
+        .gnb02>ul>li>a{
+            color: rgb(235, 235, 235);
+            text-decoration: none;
+        }
+        .gnb02>ul>li>a:hover{
+            color: #ff9100;
+            text-decoration: underline;
+        }
+
+/* 3번째 */
+        .gnb03{
+            width: 100%; height: 42px;
+            background-color:#0D4633;
+        }
+        .gnb03>ul{
+            width: 1000px;
+            margin: 0px auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        .gnb03>ul>li{
+            line-height: 40px;
+            padding: 0px 10px;
+        }
+        .gnb03>ul>li>a{
+            color: rgb(235, 235, 235);
+            text-decoration: none;
+        }
+        .gnb03>ul>li>a:hover{
+            color: #ff9100;
+            text-decoration: underline;
+        }
+            /* 서브메뉴 서식 */
+        .sub{
+            position: absolute;/*가로크기를 없애는 특성이 있다.*/
+            width: 100%;/*블럭요소지만 다시 설정함*/
+            
+        }
+        .sub>li{
+
+        }
+        .sub>li>a{
+            color: rgb(255, 255, 255);
+            font-size: 12px;
+            text-decoration: none;
+            
+        }
+        .sub>li>a:hover{
+            color: #ff9100;
+            font-weight: bold;
+        }
+
+        #navi_wrap{
+            background-color:hsla(160, 69%, 16%, 0.801);
+            overflow: hidden;
+            height: 40px;
+            transition: 0.5s;
+            position: absolute;
+        }
+        #navi_wrap:hover{
+            height: 360px;
+        }
+        footer{
+            background-color: #2E2F2E;
+            width: 100%;
+            height: 260px;
+        }
+        .copy{
+            font-size: 12px;
+            font-family: "돋움";
+            color:#E4DFD5;
+            margin: 18px 0px 0px;
+        }
+
+        address{
+            font-size: 12px;
+            /* font-family: "돋움"; */
+            margin: 0px 3px 0px 10px;
+            color: #ccc;
+        }
+        .fd{
+            font-size: 12px;
+            /* font-family: "돋움"; */
+            margin: 0px 3px 0px 0px;
+            color: #ccc;
+        }
+        span{
+            margin: 0px 15px 0px 0px;
+        }
+        .fd2{
+            margin: 40px 0px 0px;
+        }
+        .fb{
+            border: 1px solid #ccc; font-size: 9px;
+        }
+        .fb>a{
+            color: #ccc;
+        }
+        footer>.fu{
+            width: 1000px;
+            height: 179px;
+            margin: 0px auto;
+        }
+        .fn{
+            display: flex;
+            /* margin: 0px auto; */
+            justify-content: space-around;
+            padding: 30px 0px 0px 0px;
+        }
+        .fn>li{
+            height: 17px;
+        }
+        .fn>li>a{
+            text-decoration: none;
+            color: #ccc;
+            font-size: 13px;
+            
+        }
+        /* .fn>li>a:hover{} */
+        .row1{
+            margin: 10px;
+        }
+        footer>.fu .textc01{
+            color:#B65827 ;
+        }
+        .cir{
+            margin: 0px 10px 10px 5px;
+            padding: 0px 0px 10px 0px;
+            font-size: 20px;
+
+        }
+        </style>
+</head>
+<body>
+    <h2>01_Web_navigation</h2>
+    <p>web page에서 사용자가 원하는 정보를 찾기 위한 가장 기본적인 수단으로서 navigation이라고 하며, 종류에는 main menu, sub menu, search menu, login menu, side menu, drop down mune, tep menu, 사용자의 현재 위치를 알려주는 'location' menu 등이 있다.</p>
+    <p>navigation 개발은 menu 목록을 나열하기 위해 목록Tag Element ul,li Tag를 사용하고, a Tag element로 hyperlink를 설정한다.</p>
+    <p>gnb : Global Navigation Bar의 약자로서 보통 main menu를 작성할 때 사용하는 명칭</p>
+    <p>inb : Local Navigation Bar의 약자로서 main menu 외에 sub menu나 content 영역에서 사용되는 menu를 작성하고자 할 때 사용하는 명칭이다.</p>
+
+    <h3>1. 세로방향의 navigation</h3>
+    <!-- nav.gnb01>ul>li*4>a -->
+    <nav class="gnb01">
+        <li><a href="#"title=""></a></li>
+        <ul>
+            <li><a href="#"title="">브랜드 스토리</a></li>
+            <li><a href="#"title="">새로워진 뚜레쥬르</a></li>
+            <li><a href="#"title="">제품 안내</a></li>
+            <li><a href="#"title="">이벤트&#x0026;멤버십</a></li>
+            <li><a href="#"title="">쇼핑몰&#x0026;케이크 배달신청</a></li>
+        </ul>
+    </nav>
+    <h3>2. 가로방향의 navigation</h3>
+    <nav class="gnb02">
+        <li><a href="#"title=""></a></li>
+        <ul>
+            <li><a href="#"title="">브랜드 스토리</a></li>
+            <li><a href="#"title="">새로워진 뚜레쥬르</a></li>
+            <li><a href="#"title="">제품 안내</a></li>
+            <li><a href="#"title="">이벤트&#x0026;멤버십</a></li>
+            <li><a href="#"title="">쇼핑몰&#x0026;케이크 배달신청</a></li>
+        </ul>
+    </nav>
+    <h3>3. 2단 navigation</h3>
+    <div id="navi_wrap">
+        <nav class="gnb03">
+            <li><a href="#"title=""></a></li>
+            <ul>
+                <li><a href="#"title="">브랜드 스토리</a>
+                    <ul class="sub">
+                        <li><a href="#" title="브랜드 스토리">브랜드 스토리</a></li>
+                        <li><a href="#" title="뚜레쥬르 광고">뚜레쥬르 광고</a></li>
+                        <li><a href="#" title="뚜레쥬르 재료 이야기">뚜레쥬르 재료 이야기</a></li>
+                        <li><a href="#" title="글로벌 뚜레쥬르">글로벌 뚜레쥬르</a></li>
+                        <li><a href="#" title="라뜰리에 뚜레쥬르">라뜰리에 뚜레쥬르</a></li>
+                        <li><a href="#" title="뚜레쥬르 착한빵">뚜레쥬르 착한빵</a></li>
+                        <li><a href="#" title="뉴스 & 공지사항">뉴스 & 공지사항</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"title="">새로워진 뚜레쥬르</a>
+                    <ul class="sub">
+                        <li><a href="#" title="New 뚜레쥬르 살펴보기">New 뚜레쥬르 살펴보기</a></li>
+                        <li><a href="#" title="건강한 데일리 베이커리">건강한 데일리 베이커리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"title="">제품 안내</a>
+                    <ul class="sub">
+                        <li><a href="#" title="신제품">신제품</a></li>
+                        <li><a href="#" title="빵">빵</a></li>
+                        <li><a href="#" title="케이크">케이크</a></li>
+                        <li><a href="#" title="델리">델리</a></li>
+                        <li><a href="#" title="선물">선물</a></li>
+                        <li><a href="#" title="디저트&스낵">디저트&스낵</a></li>
+                        <li><a href="#" title="음료">음료</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"title="">이벤트&#x0026;멤버십</a>
+                    <ul class="sub">
+                        <li><a href="#" title="진행중인 이벤트">진행중인 이벤트</a></li>
+                        <li><a href="#" title="이벤트 당첨자">이벤트 당첨자</a></li>
+                        <li><a href="#" title="CJ ONE 멤버십">CJ ONE 멤버십</a></li>
+                        <li><a href="#" title="제휴 해택">제휴 해택</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"title="">쇼핑몰&#x0026;케이크 배달신청</a>
+                    <ul class="sub">
+                        <li><a href="#" title="예약/픽업서비스">예약/픽업서비스</a></li>
+                        <li><a href="#" title="케이크 배달신청">케이크 배달신청</a></li>
+                    </ul>
+                </li>   
+            </ul>
+        </nav>
+    </div>
+<br>
+<br>
+    <h3>4. footer 영역에 들어가는 회사소개, 이용약관, 개인정보처리방침 menu</h3>
+
+    <footer>
+        <div class="fu">
+            <ul class="fn">
+                <li><a href="#" title="회사소개"><span class="cir"></span>회사소개</a></li>
+                <li><a href="#" title="기사채용안내"><span class="cir">&#183</span>기사채용안내</a></li>
+                <li><a href="#" title="이용약관"><span class="cir">&#183</span>이용약관</a></li>
+                <li><a href="#" title="위치기반서비스"><span class="cir">&#183</span>위치기반서비스 이용약관</a></li>
+                <li><a href="#" title="창업안내"><span class="cir">&#183</span>창업안내</a></li>
+                <li><a href="#" title="개인정보처리방침" class="textc01"><span class="cir">&#183</span>개인정보처리방침</a></li>
+                <li><a href="#" title="이메일무단수집거부"><span class="cir">&#183</span>이메일무단수집거부</a></li>
+                <li><a href="#" title="윤리신고센터"><span class="cir">&#183</span>윤리신고센터</a></li>
+                <li><a href="#" title="법적고지"><span class="cir">&#183</span>법적고지</a></li>
+                <li><a href="#" title="사이트맵"><span class="cir">&#183</span>사이트맵</a></li>
+            </ul>
+            <div class="fd2">
+                <address class="row1">
+                    상호명:CJ푸드빌(주) 주소:(우)04555 서울시 중구 마른내로34(초동 106-9번지)KT&G을지로타워 3, 9-11층 CJ푸드빌㈜
+                </address>
+                <div class="fd">
+                    <div class="row1">
+                    <span>고객센터:1577-0700</span> <span>통신판매업종신고증 제 2011-서울중구-0771호</span> <span class="fb"><a href="#"title="사업자정보확인">사업자정보확인</a></span>
+                    <span>호스팅제공자 : CJ올리브네트웍스(주) </span></div>
+                    
+                    <div class="row1">
+                    <span>사업자등록번호:312-81-42519대표이사:김찬호</span> <span>개인정보보호책임자:박정관</span>
+                    <span> 대표 이메일:help_master@cj.net</span></div>
+                </div>
+                
+                <p class="copy">COPYRIGHT 2022©CJ Foodville ALL RIGHT RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

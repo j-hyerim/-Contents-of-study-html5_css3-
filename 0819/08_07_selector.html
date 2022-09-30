@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08_07_selector_동위선택자</title>
+  <style>
+    /* 1. '+' 선택자 사용하기 */
+    ol > .first + li{
+      font-size:20px;
+      color:#ff0000;
+    }
+
+    /* 2. '~' 선택자 사용하기 */
+    ol > .first ~ li{
+      font-style:italic;
+    }
+
+    /* 문. 첫번째 li태그 뒤에 있는 동생들 중에서 마지막번째 li선택하여 서식적용하기
+      배경색:노랑
+    */
+    /* ol > .first + li + li + li + li{ } */
+    ol > .first ~ .last{
+      background-color:#ffff00;
+    }
+
+    img{width:48px;}
+    .gnb{
+      width:80%;
+      height:100%;
+      position:fixed;top:0px;
+      left:100%;
+      background:rgba(0,0,0,.7);
+      color:#ffffff;
+      transition:0.5s;
+    }
+
+    /* 햄버거 메뉴를 클릭하면 체크박스 뒤에 있는 .gnb가 선택되어 나오게 한다. */
+    #toggle:checked  + .gnb{left:20%;}
+
+    /* 자주하는 질문서식 */
+    #faq{
+      width:1200px;
+      margin:0px auto; /* 바깥여백 좌,우 auto를 주면 박스가 화면중앙에 배치된다. */
+    }
+    #faq > label{
+      border-top:1px solid #cccccc;
+      line-height:30px;
+      display:block;
+    }
+    #faq > p{
+      line-height:30px;
+      border-bottom:1px solid #cccccc;
+      display: none;/* 화면에서 숨기기 */
+    }
+    #q01, #q02, #q02{display:none;}
+    .question{display:none;}
+
+    /* 질문(label)을 클릭하면 #q01이 체크되면서 바로 뒤 동생 답변(p)이 보이게 한다. */
+    #q01:checked + p{display:block;}
+
+  </style>
+</head>
+<body>
+  <h2>08_07_selector_동위선택자</h2>
+  <p>동위선택자란? 부모요소의 아래 자식요소들의 관계(동일한 관계=형제)에서 기준을 정하고, 그 기준이 되는 요소의 바로 뒤나 뒤부터 나오는 모든 요소를 선택하고자 할 때 사용한다.</p>
+  <ul>
+    <li>선택자1 + 선택자2 : 선택자1의 바로 뒤에 오는 선택자2를 선택한다.</li>
+    <li>선택자1 ~ 선택자2 : 선택자1의 뒤에 있는 요소들 중에서 선택자2를 선택한다.</li>
+  </ul>
+
+  <ol>
+    <li class="first">ol태그의 첫번째 자손입니다.</li>
+    <li>ol태그의 두번째 자손입니다.</li>
+    <li>ol태그의 세번째 자손입니다.</li>
+    <li>ol태그의 네번째 자손입니다.</li>
+    <li class="last">ol태그의 마지막 자손입니다.</li>
+  </ol>
+
+  <h3>1. 스타벅스 모바일 내비게이션</h3>
+  <label for="toggle">
+    <img src="./images/menu.png" alt="메뉴">
+  </label>
+  <input type="checkbox" id="toggle">
+
+  <nav class="gnb">
+    스타벅스 내비게이션박스
+  </nav>
+
+<h3>2. cjmall 고객센터 자주묻는 질문 Top10</h3>
+<article id="faq">
+  <h4>자주 묻는 질문 Top10</h4>
+
+  <label for="q01">1. 질문</label>
+  <input type="checkbox" id="q01" class="question">
+  <p>답변 - 답변내용은 사이트에서 복사 붙여넣기</p>
+
+</article>
+
+</body>
+</html>

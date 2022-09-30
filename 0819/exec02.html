@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>핑크하우스 공지사항 게시판 서식 구현하기</title>
+  <style>
+     /* 전체선택자를 사용하여 페이지 안의 모든 여백을 없애줌.  */
+     *{margin:0px;padding:0px;}
+    body{
+      font-family: "맑은 고딕", arial, sans-serif;
+      font-size:12px;
+      color:#333333;
+    }
+    table{
+      border-collapse: collapse; /* 셀과 셀사이 여백을 없애서 이중선 안나오게 */
+      width:780px;
+      margin:0px auto;
+    }
+    table th:first-child{width:80px;}
+    table th:nth-child(2){width:440px;}
+    table th:nth-child(3){width:100px;}
+    table th:nth-child(4){width:80px;}
+    table th:last-child{width:80px;}
+    table th{ /* 제목셀 서식 */
+      border-top:3px solid #ac0d6a;
+      border-bottom:1px solid #ac0d6a;
+      background-color:#dd3697;
+      color:#ffffff;
+      text-transform: uppercase;
+      line-height:30px;
+    }
+    table tbody tr{ /* 내용 7줄 서식 */
+      border-bottom:1px dashed #cccccc;/* 점선만들기 */
+      line-height:24px; /* 줄간격 */
+    }
+    table tbody tr:nth-child(2n){ /* 짝수줄에만 배경색 */
+      background-color:#f8f8c2;
+    }
+    
+  </style>
+</head>
+<body>
+  <table>
+    <caption>공지사항</caption>
+    <thead>
+      <tr>
+        <th>no.</th>
+        <th>subject</th>
+        <th>writer</th>
+        <th>date</th>
+        <th>hit</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+      </tr>
+      <tr>
+        <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+      </tr>
+      <tr>
+        <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+      </tr>
+      <tr>
+        <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+      </tr>
+      <tr>
+        <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+      </tr>
+      <tr>
+        <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+      </tr>
+      <tr>
+        <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="5">폼태그를 사용하여 검색양식 만들기</td>
+      </tr>
+    </tfoot>
+  </table>
+
+</body>
+</html>

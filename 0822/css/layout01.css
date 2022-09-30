@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+* {
+    margin: 0px; padding: 0px;
+}
+header,main,footer{
+    width: 1200px;
+    margin:0px auto;
+    background-color: #ccc;
+}
+
+header{
+    width: 1200px; height:180px;
+    margin-bottom: 10px;
+    background-color: rgb(187, 150, 150);
+}
+header > h1{
+     text-align: center;
+     width: 300px;
+     height: 60px;
+     background-color: aqua;
+     font-size: 20px;
+     margin: 0px auto;
+     padding-top: 20px;
+}
+header >div {
+    height: 60px;
+    background-color: rgb(197, 141, 141);
+}
+header > div > nav {
+    line-height: 50px;
+    margin-top: 30px;
+    text-align: center;
+    background-color: rgb(196, 130, 130);
+}
+
+main > section::after{
+    clear:both;
+    content: "";
+    display: block;
+}
+#visual{
+    width: 1200px; height: 500px;
+    margin-bottom: 10px;
+    background-color: rgb(145, 10, 10);
+}
+#lefti {
+    width: 590px; height:400px;
+    background-color: rgb(87, 38, 38);
+    float: left;
+}
+#righti {
+    width: 590px; height:400px;
+    background-color: rgb(29, 12, 12);
+    float: right;
+}
+main >section {
+    margin-bottom: 10px;
+}
+footer{
+    width: 1200px;
+    height: 130px;
+    background-color: rgb(68, 50, 50);
+}
+footer>h2{
+    width: 310px; height: 120px;
+    background-color: rgb(88, 80, 80);
+     margin: 0px auto;
+     float: left;
+}
+footer>address{
+    width: 870px; height: 120px;
+    background-color: rgb(219, 128, 128);
+    margin: 0px auto;
+    float: right;
+}

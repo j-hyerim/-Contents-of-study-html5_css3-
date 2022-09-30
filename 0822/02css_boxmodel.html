@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02css_display(가시속성),box-model 개념이해</title>
+    <style>
+        div{
+            width: 100px; height: 100px;
+            background-color: yellow;
+        }
+        #box01{
+            border: 5px solid#ff0000;
+            padding: 10px;
+        }
+        #box02{
+            border-left: 5px double #0000ff;
+            border-bottom: 3px dashed #ff0000;
+            padding: 10px 30px; /*위아래 왼오*/
+        }
+        #box03{
+            border-left: 10px dotted #00ff00;
+            border-bottom: 3px solid #000000;
+            padding: 10px 5px 10px 3px;/*위 오 아 왼*/
+            margin: 5px 10px; /*위아래 왼오*/
+            /* r = 100 + 10  +8 +20 ㅅ= 100 +3 +20+10*/
+        }
+        #box04{
+            padding: 10px 5px;
+            border: 5px solid #ff0000;
+            box-sizing: border-box; /* css3에서 새롭게 추가된 소석 - 테두리, 패딩값을 크기에 포함하여 계산하는 속성.  /박스의 전체크기를 처음에 정한 크기를 벗어나지 않록 도와준다*/
+        }
+        .p01{
+            background-color: #afeeaf;
+            display: inline;
+        }
+        .text01{
+            background-color: rgb(206, 245, 245);
+            display: block;
+            margin-bottom: 10px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>1. display p.178</h2>
+    <p>html Tag는 저마다 보이지 않는 특성을 가지고 있는데 이것을 'display' 속성이라고 한다.</p>
+    <dl>
+        <dt>Display의 종류</dt>
+        <dd>block</dd>
+        <dd>inline-blouk</dd>
+        <dd>inline</dd>
+        <dd>table</dd>
+        <dd>cell</dd>
+        <dd>none</dd>
+        <dd>flex, grid 외 ...</dd>
+    </dl>
+
+    <h3>blouk 방식의 요소</h3>
+    <p class="p01">p tag인 나는 blouk element입니다. 왼쪽에서 오른쪽까지 내용을 무조건 차지합니다. blouk element는 줄바꿈을 하지 않아도 자동으로 줄이 변경됩니다. 또한 가로크기, 세로크기 값을 설정하여 크기를 지정할 수 있습니다. blouk element의 종류로는 p, h1~h6, div, header, nav, main, section, article, aside, footer, address, dl, dt, dd, ul, li, ol, form, fieldset, gr, table 등이 있습니다.</p>
+    <span>위 문단요소의 성격이 변경되어 현 문장이 올라갑니다.</span>
+
+    <h3>inline 방식의 요소</h3>
+    <span class="text01">span tag인 나는 inline element 입니다. 글자가 있는 곳 까지만 영역을 차지합니다.</span>
+    <span class="text01">blouk element와 다르게 자동으로 줄이 변경되지 않고 br Tag를 이용하여 줄바꿈을 합니다.</span>
+    <span class="text01">inline element는 크기 값을 가질 수 없습니다. 대신 display 속성을 blouk 또는 inline-blouk으로 변경하면 가능합니다.</span>
+    <span class="text01">대표적인 Tag로는 img, b, strong, sup, sub, input, label, button, textarea ... 등이 있습니다.</span>
+    <span class="text01">span Tag는 tag 자체의 의미는 없지만 글자를 묶어서 서식을 적용하고자 할 때 사용합니다.</span>
+    <span class="text01">span Tag는 tag 자체의 의미는 없지만 글자를 묶어서 서식을 적용하고자 할 때 사용합니다.</span>
+    <a href="#" title="">Hyperlink</a>
+    <a href="#" title="">Hyperlink</a>
+    <ins>글자에 밑줄 긋기</ins>
+    <strong>글자 강조하기</strong>
+    <s>취소선</s>
+    <h2>2. box modle이란? block Element와 lnline element가 가질 수 있는 size, margin, padding, border의 값들을 사용하여 배치하는 개념이다.</h2>
+    <dl>
+        <dt>사용 속성 - 크기 속성, 테두리, margin, padding</dt>
+        <dd>width, height (p.162) : 가로 세로 크기를 지정하며, px, %등의 단위를 사용한다.</dd>
+        <dd>border (p.167) : 테두리를 지정하고자 할 때 사용하며 축약법으로는 'border: 두께 모양 색상' 으로 작성한다.</dd>
+        <dd>margin (p.164) : 선택한 요소를 기준으로 바깥쪽으로 여백을 설정할 때 사용한다.</dd>
+        <dd>padding (p.165) : 선택한 요소를 기준으로 안쪽으로 여백을 설정할 때 사용한다.</dd>
+    </dl>
+    <br>
+    <pre>
+            box 계산 공식
+
+        {  가로 전체 크기 = padding + margin + border + 가로크기  }
+        {  세로 전체 크기 = padding + margin + border + 세로크기  }
+        
+    </pre>
+    <div id="box01">Boxsize 계산하기</div><br>
+    <div id="box02">Boxsize 계산하기</div><br>
+    <div id="box03">Boxsize 계산하기</div><br>
+    <div id="box04">Boxsize 계산하기 (120*130) </div><br>
+</body>
+</html>
