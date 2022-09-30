@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/swiper.css" type="text/css">
+    <script src="./script/swiper.js"></script>
+    <title>slide</title>
+    <style>
+        .slide {
+            width: 350px;
+            /* height: 280px; */
+            position: relative;
+            margin: 0px auto;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="slide">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#" title="현대slide"><img src="./images/guseo1.jpg" alt="24시동물응급센터" id="logom"></a></div>
+                    <div class="swiper-slide"><a href="#" title="현대slide"><img src="./images/guseo2.jpg" alt="24시동물응급센터" id="logo2"></a></div>
+                    <div class="swiper-slide"><a href="#" title="현대slide"><img src="./images/guseo3.jpg" alt="24시동물응급센터" id="logo3"></a></div>
+                    <div class="swiper-slide"><a href="#" title="현대slide"><img src="./images/guseo4.jpg" alt="24시동물응급센터" id="logo2"></a></div>
+                    <div class="swiper-slide"><a href="#" title="현대slide"><img src="./images/guseo5.jpg" alt="24시동물응급센터" id="logo3"></a></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </main>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 0,
+          effect: "slid", /*슬라이드효과 */
+          centeredSlides: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      </script>
+</body>
+</html>
